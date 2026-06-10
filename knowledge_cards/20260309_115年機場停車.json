@@ -1,0 +1,1520 @@
+{
+  "cards": [
+    {
+      "card_id": "AIRPORT_PARKING_001",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場外圍停車-無限卡無限次群組",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "環球無限卡",
+        "昇恆昌無限卡",
+        "卓富無限卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "環球無限卡",
+        "昇恆昌無限卡",
+        "卓富無限卡",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "近六個月航旅消費筆數",
+          "operator": ">=",
+          "value": 1,
+          "display": "使用前六個月內(含使用當月)任刷一筆當次旅遊之機票/旅遊團費",
+          "confidence": 0.85
+        },
+        {
+          "field": "出場日",
+          "operator": "in",
+          "value": "2026-01-01~2026-12-31",
+          "display": "權益期間115/1/1~115/12/31，年度停車次數以出場日判斷權益使用年度",
+          "confidence": 0.9
+        }
+      ],
+      "result": "環球無限卡、昇恆昌無限卡、卓富無限卡持卡人於使用前六個月內(含使用當月)任刷一筆當次旅遊之機票或旅遊團費，於停車/取車時持該卡及出國證明文件(限護照、機票或登機證)完成過卡檢核，即可於配合之出國機場外圍停車場享免費停車，次數無限制，每次最多免費停放30天。旅遊團費包含Agoda、Hotels.com、Booking.com、Expedia、Trivago、Trip.com網站之線上訂房消費。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": null,
+          "max_days": null,
+          "per_use_limit_days": 30,
+          "locations": [
+            "桃園機場外圍停車場",
+            "台中機場(中興嘟嘟房台中機場二站)",
+            "高雄小港機場(大程/大鵬)"
+          ]
+        }
+      },
+      "calculation_hint": "消費計算區間=機場停車出場日月份回推6個月(含使用當月)",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "近6個月(含使用當月)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_無限卡無限次30天群組",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "機票/旅遊團費/線上訂房消費透過行動支付(例:街口支付等)付款不認列",
+        "飯店/住宿地點現場刷卡非旅遊團費認列範圍",
+        "當次航旅消費限使用1次機場停車權益",
+        "小三通模式不適用出國免費停車",
+        "不提供單程機票之出國停車",
+        "同一ID名下兩張以上卡片消費達檻，僅能使用一張卡片之權益，第二張將過卡失敗"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "原文表格中消費門檻與免費次數/天數欄位跨列對應(無限次30天/次與上限12次30天/次相鄰)，需確認環球/昇恆昌/卓富無限卡對應「無限次、30天/次」無誤",
+        "條件『任刷一筆當次旅遊之機票/旅遊團費』信心不足，需人工確認原文表格列對應"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_002",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場外圍停車-12次30天群組",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "國泰航空世界卡",
+        "台新商務卡",
+        "新光三越無限卡",
+        "新光三越世界卡",
+        "Mercedes-Benz無限卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "國泰航空世界卡",
+        "台新商務卡",
+        "新光三越無限卡",
+        "新光三越世界卡",
+        "Mercedes-Benz 無限卡",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "近六個月航旅消費金額",
+          "operator": ">=",
+          "value": 30000,
+          "display": "使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費金額合計達NT$30,000以上",
+          "confidence": 0.85
+        },
+        {
+          "field": "年度停車次數",
+          "operator": "<=",
+          "value": 12,
+          "display": "年度(115/1/1~115/12/31)停車次數上限12次，以出場日判斷權益使用年度",
+          "confidence": 0.85
+        }
+      ],
+      "result": "國泰航空世界卡、台新商務卡、新光三越無限卡、新光三越世界卡、Mercedes-Benz無限卡持卡人於使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費合計達NT$30,000以上，持卡及出國證明文件完成過卡檢核，可於配合之出國機場外圍停車場免費停車，年度上限12次，每次最多30天。旅遊團費包含Agoda、Hotels.com、Booking.com、Expedia、Trivago、Trip.com之線上訂房消費。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": 12,
+          "max_days": null,
+          "per_use_limit_days": 30,
+          "locations": [
+            "桃園機場外圍停車場",
+            "台中機場(中興嘟嘟房台中機場二站)",
+            "高雄小港機場(大程/大鵬)"
+          ]
+        }
+      },
+      "calculation_hint": "消費計算區間=機場停車出場日月份回推6個月(含使用當月)；門檻差額=30000-已刷航旅金額",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "近6個月(含使用當月)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_上限12次30天群組",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.75,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "機票/旅遊團費/線上訂房消費透過行動支付(例:街口支付等)付款不認列",
+        "飯店/住宿地點現場刷卡非旅遊團費認列範圍",
+        "當次航旅消費限使用1次機場停車權益",
+        "小三通模式不適用出國免費停車",
+        "不提供單程機票之出國停車",
+        "同一ID名下兩張以上卡片消費達檻，僅能使用一張卡片之權益",
+        "消費未達檻使用停車者，依各場站每日卡友價由本行下帳"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "卡別範圍含斜線(原文「新光三越卡無限/世界卡」)需確認是否為兩張卡別",
+        "原文表格中消費門檻與免費次數欄位跨列對應，需確認本群組對應「上限12次、30天/次」無誤",
+        "條件『達NT$30,000以上』之卡別歸屬依表格列對應推定，需人工確認"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_003",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場外圍停車-4次10天群組",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "財富無限卡",
+        "雙幣信用卡",
+        "Mercedes-Benz御璽卡",
+        "Mercedes-Benz白金卡",
+        "尊爵世界卡",
+        "國泰航空翱翔鈦金卡",
+        "昇恆昌御璽卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "財富無限卡",
+        "雙幣信用卡",
+        "Mercedes-Benz 御璽卡",
+        "Mercedes-Benz 白金卡",
+        "尊爵世界卡",
+        "國泰航空翱翔鈦金卡",
+        "昇恆昌御璽卡",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "近六個月航旅消費金額",
+          "operator": ">=",
+          "value": 30000,
+          "display": "使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費金額合計達NT$30,000以上",
+          "confidence": 0.85
+        },
+        {
+          "field": "年度停車次數",
+          "operator": "<=",
+          "value": 4,
+          "display": "年度(115/1/1~115/12/31)停車次數上限4次，以出場日判斷權益使用年度",
+          "confidence": 0.85
+        }
+      ],
+      "result": "財富無限卡、雙幣信用卡、Mercedes-Benz御璽卡、Mercedes-Benz白金卡、尊爵世界卡、國泰航空翱翔鈦金卡、昇恆昌御璽卡持卡人於使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費合計達NT$30,000以上，持卡及出國證明文件完成過卡檢核，可於配合之出國機場外圍停車場免費停車，年度上限4次，每次最多10天。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": 4,
+          "max_days": null,
+          "per_use_limit_days": 10,
+          "locations": [
+            "桃園機場外圍停車場",
+            "台中機場(中興嘟嘟房台中機場二站)",
+            "高雄小港機場(大程/大鵬)"
+          ]
+        }
+      },
+      "calculation_hint": "消費計算區間=機場停車出場日月份回推6個月(含使用當月)；門檻差額=30000-已刷航旅金額",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "近6個月(含使用當月)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_上限4次10天群組",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.75,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "機票/旅遊團費/線上訂房消費透過行動支付(例:街口支付等)付款不認列",
+        "飯店/住宿地點現場刷卡非旅遊團費認列範圍",
+        "當次航旅消費限使用1次機場停車權益",
+        "小三通模式不適用出國免費停車",
+        "不提供單程機票之出國停車",
+        "同一ID名下兩張以上卡片消費達檻，僅能使用一張卡片之權益",
+        "消費未達檻使用停車者，依各場站每日卡友價由本行下帳"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "卡別範圍含斜線(原文「Mercedes-Benz 御璽/白金卡」)需確認是否為兩張卡別",
+        "雙幣信用卡為產品總稱，具體適用卡號需對照卡號前8碼直查表確認",
+        "原文表格中消費門檻與免費次數欄位跨列對應，需確認本群組對應「上限4次、10天/次」無誤"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_004",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場外圍停車-國泰航空鈦金卡2次5天",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "國泰航空鈦金卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "國泰航空鈦金卡",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "近六個月航旅消費金額",
+          "operator": ">=",
+          "value": 30000,
+          "display": "使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費金額合計達NT$30,000以上",
+          "confidence": 0.85
+        },
+        {
+          "field": "年度停車次數",
+          "operator": "<=",
+          "value": 2,
+          "display": "年度(115/1/1~115/12/31)停車次數上限2次，以出場日判斷權益使用年度",
+          "confidence": 0.9
+        }
+      ],
+      "result": "國泰航空鈦金卡持卡人於使用前六個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費合計達NT$30,000以上，持卡及出國證明文件完成過卡檢核，可於配合之出國機場外圍停車場免費停車，年度上限2次，每次最多5天。旅遊團費包含Agoda、Hotels.com、Booking.com、Expedia、Trivago、Trip.com之線上訂房消費。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": 2,
+          "max_days": null,
+          "per_use_limit_days": 5,
+          "locations": [
+            "桃園機場外圍停車場",
+            "台中機場(中興嘟嘟房台中機場二站)",
+            "高雄小港機場(大程/大鵬)"
+          ]
+        }
+      },
+      "calculation_hint": "消費計算區間=機場停車出場日月份回推6個月(含使用當月)；門檻差額=30000-已刷航旅金額",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "近6個月(含使用當月)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_國泰航空鈦金卡2次5天",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "機票/旅遊團費/線上訂房消費透過行動支付(例:街口支付等)付款不認列",
+        "飯店/住宿地點現場刷卡非旅遊團費認列範圍",
+        "當次航旅消費限使用1次機場停車權益",
+        "小三通模式不適用出國免費停車",
+        "不提供單程機票之出國停車",
+        "同一ID名下兩張以上卡片消費達檻，僅能使用一張卡片之權益",
+        "消費未達檻使用停車者，依各場站每日卡友價由本行下帳"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "原文表格中消費門檻欄位為跨列共用儲存格，需確認國泰航空鈦金卡適用六個月NT$30,000門檻無誤"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_005",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場外圍停車-三個月門檻群組2次5天",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "三商美邦御璽卡",
+        "新光三越御璽卡",
+        "新光三越鈦金卡",
+        "太陽卡",
+        "玫瑰卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "太陽/玫瑰卡之御璽、鈦金、晶緻、白金、金、普卡等級"
+        ],
+        "excludes": [
+          "太陽/玫瑰卡未選「國際機場週邊停車」優惠之卡號"
+        ],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "三商美邦御璽卡",
+        "新光三越御璽卡",
+        "新光三越鈦金卡",
+        "太陽卡",
+        "玫瑰卡",
+        "自由選方案",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "近三個月航旅消費金額",
+          "operator": ">=",
+          "value": 30000,
+          "display": "使用前三個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費金額合計達NT$30,000以上",
+          "confidence": 0.85
+        },
+        {
+          "field": "年度停車次數",
+          "operator": "<=",
+          "value": 2,
+          "display": "年度(115/1/1~115/12/31)停車次數上限2次，以出場日判斷權益使用年度",
+          "confidence": 0.85
+        },
+        {
+          "field": "太陽/玫瑰卡權益選項",
+          "operator": "==",
+          "value": "國際機場週邊停車",
+          "display": "太陽/玫瑰卡限選「國際機場週邊停車」優惠的卡號方可使用",
+          "confidence": 0.9
+        }
+      ],
+      "result": "三商美邦御璽卡、新光三越御璽卡、新光三越鈦金卡及太陽/玫瑰卡(御璽/鈦金/晶緻/白金/金/普卡，限選「國際機場週邊停車」優惠之卡號)持卡人，於使用前三個月內(含使用當月)刷卡支付當次旅遊之機票/旅遊團費合計達NT$30,000以上，持卡及出國證明文件完成過卡檢核，可於配合之出國機場外圍停車場免費停車，年度上限2次，每次最多5天。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": 2,
+          "max_days": null,
+          "per_use_limit_days": 5,
+          "locations": [
+            "桃園機場外圍停車場",
+            "台中機場(中興嘟嘟房台中機場二站)",
+            "高雄小港機場(大程/大鵬)"
+          ]
+        }
+      },
+      "calculation_hint": "消費計算區間=機場停車出場日月份回推3個月(含使用當月)；門檻差額=30000-已刷航旅金額",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "近3個月(含使用當月)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_三個月門檻2次5天群組",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.75,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "太陽/玫瑰卡未選「國際機場週邊停車」優惠之卡號(含自由選無機場停車)不適用，由停車場直接收費",
+        "機票/旅遊團費/線上訂房消費透過行動支付(例:街口支付等)付款不認列",
+        "飯店/住宿地點現場刷卡非旅遊團費認列範圍",
+        "當次航旅消費限使用1次機場停車權益",
+        "小三通模式不適用出國免費停車",
+        "不提供單程機票之出國停車",
+        "同一ID名下兩張以上卡片消費達檻，僅能使用一張卡片之權益",
+        "消費未達檻使用停車者，依各場站每日卡友價由本行下帳"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "太陽卡/玫瑰卡涵蓋多個卡等級(御璽/鈦金/晶緻/白金/金/普卡)，具體適用卡號需對照卡號前8碼直查表(是否選「國際機場週邊停車」優惠)",
+        "卡別範圍含斜線(原文「新光三越(御璽/鈦金)」)需確認是否為兩張卡別",
+        "太陽/玫瑰卡適用與自由選方案權益選項連動，方案範圍需確認每方案是否均適用"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_006",
+      "topic": "各項費用與帳務",
+      "sub_topic": "未達消費門檻之停車費下帳規則",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "航旅消費達檻狀態",
+          "operator": "==",
+          "value": false,
+          "display": "為適用卡別且使用權益停放天數，但檢核區間內航旅消費未達該卡別門檻且完成請款者",
+          "confidence": 0.85
+        },
+        {
+          "field": "下帳時間",
+          "operator": "==",
+          "value": "出場日的下個月20號(遇假日提前)",
+          "display": "未符合消費，系統於出場日的下個月20號下帳(遇假日提前)",
+          "confidence": 0.9
+        }
+      ],
+      "result": "持適用卡別使用機場停車權益但消費未達門檻者，系統將於出場日的下個月20號下帳(遇假日提前)，下帳金額以各家停車場每日卡友優惠價計收，下帳明細顯示為「機場停車費用-台新銀行-CCYYMMDD」。消費門檻檢核以出場月份判斷：近六個月門檻卡別檢核出場日回推6個月(含出場月)之航旅消費且完成請款；近三個月門檻卡別檢核回推3個月(含出場月)。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": "下帳金額=各場站每日卡友優惠價×使用權益停放天數；檢核區間=出場月份回推6或3個月(含出場月)且需完成請款",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "出場月份回推6個月或3個月(依卡別)",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_三、未符合消費系統下帳時間_下帳時間與排除項目",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "一般消費排除項目不列入門檻計算：學費、eTag自動儲值、各項代繳(收)費用、透過各繳費平台(如e-Bill全國繳費、i繳費、醫指付、電子化繳費稅處理平台等)繳納之各項費用、保險費、預借現金及其手續費/分期金/分期金手續費、代償他行信用卡/現金卡/小額信貸之代償金額、個人綜合所得稅及其分期付款期金/手續費、查核定稅(房屋稅、地價稅、牌照稅等)、燃料費、違約金、循環息、基金交易、基金手續費、信用卡年費及一般信用卡相關手續費(如掛失手續費、調閱簽單手續費)",
+        "超過權益停放天數者，超出天數由停車場直接收費(非本行下帳)",
+        "下帳費用視為消費本金，若需取消需依行內賠償流程進行"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "原文含但書「一般消費排除項目」，該排除清單於章節中之適用對象(門檻計算)為推定，需確認例外是否完整萃取",
+        "下帳明細格式為內部訊息調整後版本，需核對最新系統顯示"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_007",
+      "topic": "交通與出行權益",
+      "sub_topic": "配合停車場台新卡友優惠價",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "持台新信用卡",
+          "operator": "==",
+          "value": true,
+          "display": "憑台新卡於配合停車場享卡友價(實際卡友價仍依各場站所示)",
+          "confidence": 0.8
+        }
+      ],
+      "result": "持台新信用卡於配合停車場可享卡友價：中興嘟嘟房大園站每日200元；連勝、連統每日250元；日月亭平安場平日200元/天、連續3天以上連假300元/天；全勝、偉詮出國停車場每日200元；富士捷大園出國停車場平日150元、連續3天以上連假200元/天；中興嘟嘟房台中機場2站114/5/5前每日90元、114/5/6起每日100元；大鵬、大程每日240元、連續假期及年假為原價每日300元。超過免費停放天數者超出天數依卡友價由停車場收費；免費天數以日計非以小時計。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": "未達檻下帳與超出天數收費皆以各場站每日卡友價計收",
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_二、各卡權益說明_配合停車場卡友價表",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.75,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "實際卡友價仍依各場站所示",
+        "大鵬、大程於連續假期及年假為原價每日300元(非卡友價)",
+        "停車場現場信用卡優惠車位已滿，客戶選擇自費使用屬一般交易，無法後續退費"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "卡友價含模糊修飾詞「實際卡友價仍依各場站所示」，需確認確切數值",
+        "中興嘟嘟房台中機場2站價格存在114/5/5前後新舊兩版，於115年文件中時間版本需確認現行價格",
+        "各場站價格屬可變動資訊，需定期核對最新公告"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_008",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場停車配合場站清單",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "停放場站",
+          "operator": "in",
+          "value": [
+            "全勝出國停車場",
+            "日月亭平安場",
+            "富士捷大園出國停車場",
+            "中興嘟嘟房機場周邊停車場",
+            "偉詮出國停車場",
+            "連勝停車場",
+            "連統停車場",
+            "中興嘟嘟房台中機場二站",
+            "大程停車場",
+            "大鵬停車場"
+          ],
+          "display": "115年對外公告合作場站為全勝/日月亭平安場/富士捷/中興嘟嘟房機場周邊停車場；連勝/連統/偉詮不對外公告、可個案受理",
+          "confidence": 0.8
+        }
+      ],
+      "result": "115年機場停車配合場站：桃園機場外圍為全勝出國停車場(受理電話預約03-385-5708)、日月亭平安場(受理網路預約)、富士捷大園出國停車場(受理網路預約)、中興嘟嘟房機場周邊停車場(需先去電03-398-9898確認停放場域)；偉詮、連勝、連統為不對外公告場站，客戶堅持停放時可協助個案協調(直接過卡即可不需手抄)。台中機場為中興嘟嘟房台中機場二站(營業時間05:30~22:00，場站已搬遷至台中機場停車場入口對面巷口)。高雄小港機場為大程停車場，大程滿場時由現場人員引導至大鵬停車場。各卡別皆不需預約，部分停車場開放預約為保留車位之額外服務。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": null,
+          "max_days": null,
+          "per_use_limit_days": null,
+          "locations": [
+            "全勝出國停車場",
+            "日月亭平安場",
+            "富士捷大園出國停車場",
+            "中興嘟嘟房機場周邊停車場",
+            "偉詮出國停車場(不對外公告)",
+            "連勝停車場(不對外公告)",
+            "連統停車場(不對外公告)",
+            "中興嘟嘟房台中機場二站",
+            "大程停車場",
+            "大鵬停車場(大程滿場引導)"
+          ]
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_四、配合場站_各地區場站清單",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.75,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "連勝/連統/偉詮目前洽談中、非公告配合場站，僅個案受理，請客戶後續以公告場站停放為主",
+        "嘟嘟房台中機場二站非航廈內嘟嘟房停車場",
+        "車輛停放衍生之問題與爭議(車輛骯髒、刮傷等)依停車場管理規範辦理，與本行無涉",
+        "部分場站需留車輛鑰匙(連勝/連統/偉詮，電動車/賓士/BMW需留鑰匙且不能反鎖)，依各停車場規定",
+        "連勝/連統/偉詮每車限載5人、行李5件，超過每人/每件加收100元"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "連勝/連統/偉詮場站「目前尚在洽談中」，合作狀態與生效時點不明，需確認最新公告場站名單",
+        "本卡資訊整合自原文3個章節(權益說明、配合場站、注意事項)，需確認跨段一致性",
+        "嘟嘟房機場貨運1站報到據點為內部不可公告資訊，對客回覆時需留意"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_009",
+      "topic": "交通與出行權益",
+      "sub_topic": "機場停車使用規範與限制",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "過卡方式",
+          "operator": "==",
+          "value": "實體卡",
+          "display": "機場停車進出場皆需持實體卡過卡",
+          "confidence": 0.9
+        },
+        {
+          "field": "出國證明文件",
+          "operator": "in",
+          "value": [
+            "護照",
+            "機票",
+            "登機證"
+          ],
+          "display": "停車/取車時需持適用卡別及出國證明文件(限護照、機票或登機證)",
+          "confidence": 0.9
+        },
+        {
+          "field": "停車取車同一人",
+          "operator": "==",
+          "value": true,
+          "display": "出國停車服務的停車、取車需同為一人",
+          "confidence": 0.9
+        }
+      ],
+      "result": "機場停車權益使用規範：各卡別皆不需預約(請以「確認免費停車資格」與客戶溝通，避免提及預約)；進出場皆需持實體卡過卡並出示出國證明文件(限護照、機票或登機證)；停車與取車需同為一人；僅適用由國際機場搭乘國際航線班機出國之持卡人；本行無法保證一定有停車位，建議連假於辦理登機手續前3小時、一般日至少前1小時抵達。若於停車場進出場遇到任何問題請隨時聯絡客服，自行付費並離場無法申請退費。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": null,
+          "max_days": null,
+          "per_use_limit_days": null,
+          "locations": null
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_六、注意事項_使用規範2至8點",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "小三通模式不適用出國機場停車，僅適用由國際機場搭乘國際航線班機出國",
+        "本行沒有提供單程機票之出國停車",
+        "當日來回停車：機場停車無臨停服務，場站人員可能查驗護照海關章，非出國因素將現場收費",
+        "因颱風班機取消而當日取車，費用依現場公告計算",
+        "因班機異動同日入場>出場>再入場無個案，建議第一次入場憑卡享卡友價、第二次入場再過卡使用免費權益",
+        "自行付費並離場者無法申請退費"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "本卡資訊整合自原文2個章節(文件首頁注意事項與第六節)，需確認跨段一致性"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_010",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "正附卡與ID歸戶使用限制",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別之正卡與附卡"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "進出場卡號",
+          "operator": "==",
+          "value": "同一卡號",
+          "display": "進出場記錄需同一卡號，無法正卡刷卡進場、附卡刷卡取車，反之亦同",
+          "confidence": 0.9
+        },
+        {
+          "field": "消費卡片與使用卡片",
+          "operator": "==",
+          "value": "同一張卡",
+          "display": "採ID歸戶，正卡刷卡僅正卡可過卡免費停車，附卡刷卡時亦僅附卡可過卡",
+          "confidence": 0.9
+        }
+      ],
+      "result": "機場停車權益採ID歸戶且消費與使用需同一張卡：正卡刷卡達檻僅正卡可過卡免費停車，附卡刷卡達檻僅附卡可過卡；附卡替正卡人支付當次出國團費或機票達檻，正卡人不可享出國免費停車優惠，反之正卡替附卡刷卡，附卡人亦無法使用。進出場記錄需同一卡號。同一持卡人同一時間僅能使用名下一張卡片之權益，在該停車交易離場前，第二張卡片入場將被系統拒絕；同一ID名下兩張以上卡片達檻，僅能使用一張卡片之權益(同一輛車或不同車都不行)。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": null,
+          "max_days": null,
+          "per_use_limit_days": null,
+          "locations": null
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_五、機場停車系統操作說明_1系統邏輯及六、注意事項7-8",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "同一時間已有名下卡片使用中，第二張卡片入場將會被系統拒絕(過卡失敗)"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "本卡資訊整合自原文2個章節(系統操作說明與注意事項)，需確認跨段一致性"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_011",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "白金過卡系統(PCS)異常手抄處理",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "系統異常情境",
+          "operator": "in",
+          "value": [
+            "進場過卡無法檢核",
+            "離場過卡無法檢核+有進場紀錄",
+            "離場過卡無法檢核+無進場紀錄"
+          ],
+          "display": "客戶有權益但停車場過卡系統無法檢核之三種異常情境",
+          "confidence": 0.9
+        }
+      ],
+      "result": "機場停車系統異常處理(白金過卡系統PCS登錄)：(A)進場過卡無法檢核：確認客戶有權益後，回覆停車場「請先協助手抄使用權益+提供客服員編」。(B)離場過卡無法檢核且有進場紀錄：點選「機場停車預約資料變更」輸入卡號與離場日期後變更，回覆停車場「客戶可免費停車天數+客服員編+卡號前八碼」。(C)離場過卡無法檢核且無進場紀錄：點選「機場停車預約資料變更」輸入卡號、進場日期、離場日期、停車場站後變更，回覆內容同B。三種情境皆需建立MTMF：「系統異常手抄機場停車免費X天(YYYMMDD-YYYMMDD使用)」，系統異常不列入個案次數。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260309機場停車辦法_五、機場停車系統操作說明_2系統異常處理方式",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "系統異常手抄不列入個案次數",
+        "禁止修改客戶離場時間(機場停車預約資料變更功能勿改離場時間)，禁止幫客戶進行機場停車預約，否則將導致現場過卡失敗"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "MTMF範例使用民國年格式(1150212-1150218)，登錄時需依系統格式確認"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_012",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "機場停車個案開放統一做法",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "個案開放次數",
+          "operator": "<=",
+          "value": 1,
+          "display": "個案做法每人一生一次(含Never Say No)",
+          "confidence": 0.9
+        },
+        {
+          "field": "個案情境併用",
+          "operator": "==",
+          "value": "僅能擇一適用",
+          "display": "各種情境個案不得混用，僅能擇一適用，例如【消費區間】+【消費金額】不得併用",
+          "confidence": 0.9
+        }
+      ],
+      "result": "機場停車個案開放統一做法：個案每人一生一次(含Never Say No)，曾有個案紀錄者應婉拒，特殊狀況可出單PM裁示(需說明特殊原因與客戶貢獻度)；各情境個案不得混用僅能擇一。作業步驟：1.確認KM有授權個案做法；2.確認是否需提供停車場手抄資訊(於客戶入場過卡當下或離場前通知，嘟嘟房不接受事前通知，需提供車號/停放日期/免費天數/客服員編)；3.註記MTMF「X年X月個案提供機場停車+原因」；4.告知客戶若產生費用會協助追蹤減免；5.出單：已下帳出一般工單(一般帳務>帳款問題>其他)，未下帳出預約工單(問題主旨：機場預約停車及個案處理，預約日期為停車出場日次月21日，遇假日預約次一營業日)。嘟嘟房去電檢核密碼為「8567」。個案需由客服向停車場溝通，勿由客戶自行通知停車場。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": "預約日期=停車出場日次月21日(廠商統一20號請款，遇假日提前)；帳務批次減免時間差期間(原預約日21+3個工作天)出預約單避免重複減免",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260309機場停車辦法_七、問題反應_個案開放統一做法",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.75,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "特殊個案開放(出工單送行銷裁示者)勿向持卡人或停車場提及停車費請款金額，一律告知「將依合約上約定價格」請款",
+        "若客戶無手抄卡號，請客戶至RL APP>信用卡>我的卡號查詢提供",
+        "客戶於權益天數內仍付費時，務必離場前先致電客服由客服通知停車場手抄，自行付費後續無法退費",
+        "客服員編僅提供停車場人員，請勿提供給客人"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "本卡資訊整合自原文2頁之個案統一做法與手抄注意事項，需確認跨段一致性",
+        "原文出單範例日期「廠商請款日115/4/18、OPG追蹤日114/4/21」民國年疑有誤植(應為115)，需確認時間版本",
+        "嘟嘟房去電檢核密碼8567屬內部敏感資訊，不可對客揭露"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_013",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "個案-檢核消費區間不符合之放寬",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "115年度消費門檻達成(放寬區間)",
+          "operator": "==",
+          "value": true,
+          "display": "近6個月門檻卡別可個案認列8個月內之航旅消費達115年度門檻；近3個月門檻卡別可個案認列6個月內之航旅消費達門檻",
+          "confidence": 0.55
+        },
+        {
+          "field": "先前購買團票之購票證明",
+          "operator": "==",
+          "value": true,
+          "display": "當次機票為先前購買之團票：需提供當初購票證明(刷卡簽單)並核對消費且達檻無誤",
+          "confidence": 0.85
+        }
+      ],
+      "result": "檢核消費區間不符合之個案開放：(1)當次機票為先前購買之團票：需請客戶提供購票收據與機票影本，依購票收據日期核對是否以台新信用卡刷卡消費、機票票號是否符合購票收據，核對達檻無誤後可個案開放。(2)超過檢核消費區間刷機票/團費：115年度消費門檻為近6個月者，可個案認列8個月內之航旅消費有達115年度消費門檻；門檻為近3個月者，可個案認列6個月內之航旅消費達檻。連假期間應先婉拒，客戶堅持時需宣告車位狀態提醒與「自行先付款無法事後退費」。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": "個案放寬區間：6個月門檻→8個月；3個月門檻→6個月",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "個案放寬為8個月或6個月",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(1)檢核消費區間不符合",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.8,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "個案做法每人一生一次且各情境僅能擇一適用，依個案開放統一做法辦理",
+        "連假期間請先婉拒，客戶堅持才依宣告後受理",
+        "自行先付款則無法事後退費"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "引用「達115年度消費門檻」，門檻金額需跨段對照各卡權益說明表確認完整條件",
+        "條件『個案認列8個月/6個月內航旅消費達門檻』信心不足，需人工確認原文"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_014",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "個案-檢核消費金額未達門檻之補刷",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "環球無限卡",
+        "亞洲無限卡",
+        "卓富無限卡",
+        "昇恆昌無限卡",
+        "國泰航空世界卡",
+        "財富無限卡",
+        "台新商務卡",
+        "雙幣信用卡",
+        "尊爵世界卡",
+        "Mercedes-Benz無限卡",
+        "新光三越無限卡",
+        "新光三越世界卡",
+        "國泰航空翱翔鈦金卡",
+        "Mercedes-Benz御璽卡",
+        "Mercedes-Benz白金卡",
+        "國泰航空鈦金卡",
+        "新光三越御璽卡",
+        "新光三越鈦金卡",
+        "三商美邦御璽卡",
+        "昇恆昌御璽卡",
+        "太陽卡",
+        "玫瑰卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "太陽/玫瑰卡(御璽/鈦金/晶緻/白金/金/普卡，自由選)"
+        ],
+        "excludes": [],
+        "ambiguous": [
+          "原文「環球/亞洲/卓富/昇恆昌無限卡」中「亞洲無限卡」所指卡別不明且未見於本文件權益表，需確認"
+        ]
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車",
+        "自由選方案"
+      ],
+      "conditions": [
+        {
+          "field": "航旅消費未達該卡別門檻",
+          "operator": "==",
+          "value": true,
+          "display": "客戶因航旅消費未達檻要求個案提供機場停車",
+          "confidence": 0.85
+        },
+        {
+          "field": "無限卡群組補救方式",
+          "operator": "==",
+          "value": "出國期間新增任一筆海外消費",
+          "display": "環球/亞洲/卓富/昇恆昌無限卡：請客持卡於出國期間新增任一筆海外消費",
+          "confidence": 0.75
+        },
+        {
+          "field": "其他卡別補刷金額",
+          "operator": ">=",
+          "value": "30000-本次航旅消費",
+          "display": "其他適用卡別：請客於出國期間新增海外消費，補刷額度為30,000-本次航旅消費",
+          "confidence": 0.85
+        }
+      ],
+      "result": "檢核消費金額未達門檻之個案開放：環球/亞洲/卓富/昇恆昌無限卡請客戶持卡於出國期間新增任一筆海外消費即可；其餘適用卡別(國泰航空世界卡、財富無限卡、台新商務卡、雙幣信用卡、尊爵世界卡、賓士各卡、新光三越各卡、國泰航空翱翔鈦金/鈦金卡、三商美邦御璽卡、昇恆昌御璽卡及自由選太陽/玫瑰卡)請客戶於出國期間新增海外消費，補刷額度為30,000減本次航旅消費(例：區間內航旅消費23,000，則出國期間需新增海外消費7,000)。個案辦法僅提供115年適用天數。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": "補刷額度=30000-本次航旅消費金額",
+      "time_basis": {
+        "qualification_date": "出場日",
+        "window": "出國期間",
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(3)檢核消費金額不符合",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.75,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "航旅消費未達檻同時要求機場停車、國內貴賓室、國外貴賓室個案提供時，僅可擇一提供",
+        "個案辦法僅提供115年適用天數",
+        "個案做法每人一生一次且各情境僅能擇一適用"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "卡別範圍含斜線(原文「環球/亞洲/卓富/昇恆昌無限卡」等連寫)需確認拆分卡別清單正確性",
+        "「亞洲」無限卡未見於本文件權益表適用卡別，需確認所指卡別",
+        "卡別列舉繁多(22個)，需確認列舉完整性與最新對應",
+        "與國內/國外貴賓室個案互斥(擇一適用)，需確認衝突解決優先序",
+        "條件『任一筆海外消費』信心不足，需人工確認原文"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_015",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "個案-國外網站訂房之航旅消費MCC認定",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "交易MCC",
+          "operator": "in",
+          "value": [
+            "3000~3299",
+            "3303",
+            "4511",
+            "4582",
+            "4722",
+            "4723",
+            "5962",
+            "7991",
+            "7011",
+            "7922"
+          ],
+          "display": "MCC=3000~3299或3303或4511或4582或4722或4723或5962或7991或7011或7922即認定為航旅消費",
+          "confidence": 0.9
+        },
+        {
+          "field": "交易MCC與交易說明",
+          "operator": "in",
+          "value": [
+            "4816",
+            "5964"
+          ],
+          "display": "MCC=4816或5964且交易說明含「旅行社」或「XX旅遊」，亦認定為航旅消費(兩條件其一成立即可)",
+          "confidence": 0.9
+        }
+      ],
+      "result": "客戶於非官網公告名單之國外網站訂房欲認列航旅消費時，個案開放條件：符合航旅消費MCC CODE即可認列，(1)MCC為3000~3299、3303、4511、4582、4722、4723、5962、7991、7011、7922其中之一；或(2)MCC為4816或5964且交易說明含「旅行社」或「XX旅遊」。兩條件其中之一成立就算是航旅消費。若無法判斷MCC CODE，請客戶於刷卡後再來電客服確認；經客服確認為航旅消費但未被認列，再出單請PM裁示。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(2)檢核消費類型不符合_國外網站訂房MCC認定",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "無法判斷MCC CODE時不可直接認列，請客戶刷卡後來電客服確認",
+        "經客服確認為航旅消費但系統未認列者，需出單請PM裁示"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "MCC範圍3000~3299為區間表示，系統比對時需展開確認邊界值"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_016",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "個案-國內旅遊使用機場停車",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "刷卡達該卡別年度消費規定",
+          "operator": "==",
+          "value": true,
+          "display": "需刷達該卡別114年度消費規定",
+          "confidence": 0.55
+        }
+      ],
+      "result": "國內旅遊需要使用機場停車之個案開放條件：需刷達該卡別114年度消費規定；如有其他特殊原因(例如揚言投訴、剪卡等)請說明原因並出單PM確認。注意：個案開放後仍會扣抵客戶當年度機場停車次數。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(2)檢核消費類型不符合_國內旅遊",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.7,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "個案開放仍會扣抵客戶當年度機場停車次數",
+        "個案做法每人一生一次且各情境僅能擇一適用"
+      ],
+      "audience": "internal",
+      "actionability": "escalation",
+      "risk_flags": [
+        "引用「該卡別114年度消費規定」，需跨段確認完整條件；於115年文件中出現114年度疑為誤植或沿用舊規，時間版本不明需確認生效規定",
+        "條件『刷達該卡別114年度消費規定』信心不足，需人工確認原文"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_017",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "大買家/大全聯御璽卡不適用機場停車",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "大全聯御璽卡",
+        "大買家御璽卡"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "卡號前八碼4147-6358、4147-6388(大全聯御璽卡)",
+          "卡號前八碼4147-6355、5149-1466(大買家御璽卡)"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "大買家聯名卡",
+        "大全聯御璽卡",
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "卡號前八碼",
+          "operator": "in",
+          "value": [
+            "4147-6358",
+            "4147-6388",
+            "4147-6355",
+            "5149-1466"
+          ],
+          "display": "符合下表卡號前八碼之大全聯御璽卡(4147-6358/4147-6388)與大買家御璽卡(4147-6355/5149-1466)",
+          "confidence": 0.9
+        },
+        {
+          "field": "115年機場停車權益",
+          "operator": "==",
+          "value": false,
+          "display": "原114年有權益之卡別，115年不適用機場停車",
+          "confidence": 0.9
+        }
+      ],
+      "result": "大買家御璽卡與大全聯御璽卡(原114年有機場停車權益之卡別)115年不適用機場停車。若客戶堅持使用且已消費達檻：客戶現場會過卡失敗，請客服通知停車場手抄讓客戶使用，若客戶自行付費後續無法退費。若客戶尚未刷卡則無法提供此個案，請引導客戶重新申辦有機場停車權益之卡片，並以該卡刷達門檻後使用機場停車權益。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "115/1/1~115/12/31"
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(7)不符合條件卡片無權益_大買家大全聯御璽卡",
+      "source_tier": 3,
+      "source_specificity": "card_specific",
+      "confidence": 0.85,
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "客戶已刷卡達檻且堅持使用：個案通知停車場手抄，自行付費後續無法退費",
+        "客戶尚未刷卡：無法提供個案，引導重新申辦有機場停車權益之卡片"
+      ],
+      "audience": "both",
+      "actionability": "procedure",
+      "risk_flags": [
+        "原文含114年/115年權益版本變化(原114年有權益)，需確認115年正式公告已移除該卡別權益",
+        "卡號前八碼對照表需核對最新卡號直查表"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_018",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "卡片無法使用(掛失/毀補/未帶卡/帶錯卡)之處理",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "卡片狀態",
+          "operator": "in",
+          "value": [
+            "出國期間遺失",
+            "毀損補發新卡未收到",
+            "掛失後新卡已收到",
+            "掛失後新卡未收到",
+            "未攜帶卡片或帶錯卡"
+          ],
+          "display": "符合使用門檻但卡片掛失/毀損補發/未帶卡/帶錯卡等無法過卡之情境",
+          "confidence": 0.85
+        }
+      ],
+      "result": "卡片無法使用之處理：(1)出國期間遺失卡片：確認出國期間有掛失記錄，客戶在現場比照「離場過卡無法檢核+有進場紀錄」方式辦理。(2)毀損補發新卡未收到：非個案，可用舊卡使用機場停車(卡號相同系統不會擋)。(3)掛失後新卡已收到：非個案，可用新卡使用。(4)掛失後新卡未收到：個案處理，告知客戶不需攜帶信用卡，由客服直接去電停車場櫃台告知，後續依手抄個案做法處理。(5)未攜帶卡片或帶錯卡：請先委婉拒絕，若客戶堅持且之前無個案紀錄，個案開放一次並向客戶說明僅限一次，由客服致電停車場告知後依手抄個案做法處理。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(5)卡片無法使用",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.85,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "毀損補發與掛失後新卡已收到屬非個案開放，不計個案次數",
+        "未攜帶卡片/帶錯卡個案開放僅限一次，需先委婉拒絕",
+        "個案做法每人一生一次且各情境僅能擇一適用"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "處理方式引用「比照離場過卡無法檢核+有進場紀錄方式辦理」，需跨段對照系統異常處理章節確認完整流程",
+        "本卡資訊整合自原文2個章節(問題反應與系統操作說明)，需確認跨段一致性"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_PARKING_019",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "客戶要求由他人取車之處理",
+      "product_group": "信用卡",
+      "applicable_cards": [
+        "全卡別"
+      ],
+      "applicable_cards_detail": {
+        "includes": [
+          "機場停車權益適用卡別"
+        ],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": [
+        "全方案"
+      ],
+      "rule_family": [
+        "機場停車"
+      ],
+      "conditions": [
+        {
+          "field": "持卡人本人同意",
+          "operator": "==",
+          "value": true,
+          "display": "本行可取得持卡人本人同意確認由他人取車並使用權益",
+          "confidence": 0.9
+        },
+        {
+          "field": "適用場站",
+          "operator": "in",
+          "value": [
+            "連勝",
+            "連統",
+            "偉詮",
+            "日月亭平安場",
+            "全勝",
+            "富士捷",
+            "中興嘟嘟房大園站",
+            "中興嘟嘟房台中二站",
+            "大鵬",
+            "大程"
+          ],
+          "display": "適用場站：連勝/連統/偉詮/日月亭平安場/全勝/富士捷/中興嘟嘟房(大園站/台中二站)/大鵬/大程",
+          "confidence": 0.9
+        }
+      ],
+      "result": "客戶要求由他人取車時，本行取得持卡人本人同意確認由他人取車並使用權益後，由客服授權同意手抄出場；因取車人離場無卡可檢核，比照「離場過卡無法檢核+有進場紀錄」方式辦理，並由客服通知停車場告知同意使用持卡人權益。惟他人取車作業流程仍需依各停車場規範執行，本行僅就使用權益部分個案處理。",
+      "benefit": {
+        "type": "other",
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260309機場停車辦法_七、問題反應_(6)停車場站相關規範_他人取車",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.8,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": "AIRPORT_PARKING_CASE_FLOW",
+      "exceptions": [
+        "他人取車作業流程仍需依各停車場規範執行，本行僅就使用權益個案處理",
+        "需由客服通知停車場，勿由客戶自行通知"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "處理方式引用「比照離場過卡無法檢核+有進場紀錄方式辦理」，需跨段對照系統異常處理章節確認完整流程"
+      ]
+    }
+  ]
+}
