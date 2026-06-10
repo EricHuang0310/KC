@@ -1,0 +1,600 @@
+{
+  "cards": [
+    {
+      "card_id": "ELIGIBILITY_DESIGNATED_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "指定套餐方案適用資格與卡號前8碼判斷",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案"],
+      "conditions": [
+        {
+          "field": "申辦時間",
+          "operator": ">=",
+          "value": "2021-09",
+          "display": "自110/9起申辦太陽卡/玫瑰卡",
+          "confidence": 0.9
+        },
+        {
+          "field": "申辦管道",
+          "operator": "in",
+          "value": ["熱門版實體申請書", "台新官網", "行動銀行", "信用卡APP(Richart Life)"],
+          "display": "使用熱門版「實體」申請書、或透過官網/行動銀行/信用卡APP(Richart Life)申辦",
+          "confidence": 0.9
+        },
+        {
+          "field": "卡號前8碼",
+          "operator": "in",
+          "value": ["4147-6366", "4380-4566", "4147-6321", "4380-4554", "5520-0313"],
+          "display": "為適用BIN碼者（玫瑰卡：4147-6366、4380-4566；太陽卡：4147-6321、4380-4554、5520-0313）",
+          "confidence": 0.85
+        }
+      ],
+      "result": "自110/9起使用熱門版「實體」申請書、或透過台新官網/行動銀行/信用卡APP(Richart Life)申辦之太陽卡/玫瑰卡，皆適用新權益，且卡號前8碼為適用BIN碼者（玫瑰卡：4147-6366、4380-4566；太陽卡：4147-6321、4380-4554、5520-0313），適用115年【指定套餐】方案。回饋方式/方案/權益為固定，不開放變更方案。可引導客戶至台新官網智能客服輸入卡號前8碼查詢適用方案。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "自110/9（2021年9月）起申辦者適用"
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_重要產品權益對照說明及二、活動辦法第1點",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": "2021-09-01",
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "卡號前8碼為5520-0321、5149-1470、3565-5811（玫瑰卡）及5520-0366、5149-1466、3565-5812（太陽卡）者，已於113/6/28（2024-06-28）轉天天刷/大筆刷權益，非屬指定套餐",
+        "不開放變更方案；指定套餐type不開放變更為自由選權益（詳Q&A第1題）"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡別需對照卡號前8碼直查表確認（可至台新官網智能客服查詢）",
+        "本卡資訊整合自原文2個章節（重要產品權益對照說明、二、活動辦法第1點），需確認跨段一致性",
+        "灰底BIN碼（5520-0321、5149-1470、3565-5811、5520-0366、5149-1466、3565-5812）已於113/6/28轉天天刷/大筆刷，需確認BIN清單為最新版本"
+      ]
+    },
+    {
+      "card_id": "CASHBACK_DESIGNATED_001",
+      "topic": "消費回饋與排除項目",
+      "sub_topic": "指定類別與一般類別台新Point回饋",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "點數回饋"],
+      "conditions": [
+        {
+          "field": "當期帳單新增消費金額（不含保費，排除項目不計）",
+          "operator": ">=",
+          "value": 30000,
+          "display": "指定類別消費級距NT$30,000(含)以上，回饋率1.2%",
+          "confidence": 0.8
+        },
+        {
+          "field": "當期帳單新增消費金額（不含保費，排除項目不計）",
+          "operator": "<=",
+          "value": 29999,
+          "display": "指定類別消費級距NT$1~29,999，回饋率0.2%",
+          "confidence": 0.8
+        },
+        {
+          "field": "一般類別消費金額",
+          "operator": ">=",
+          "value": 1,
+          "display": "一般類別不限金額，回饋率0.2%",
+          "confidence": 0.9
+        }
+      ],
+      "result": "太陽卡/玫瑰卡指定套餐方案於115/2/1~116/1/31結帳帳單適用台新Point(信用卡)回饋：指定類別消費（太陽卡：加油/汽修+餐廳+電信費；玫瑰卡：百貨+餐廳+電信費）當期消費級距達NT$30,000(含)以上回饋1.2%、NT$1~29,999回饋0.2%；一般類別不限金額回饋0.2%；回饋上限每期1,500點台新Point(信用卡)。",
+      "benefit": {
+        "type": "cashback",
+        "details": {
+          "rate": 0.012,
+          "cap": 1500,
+          "cap_currency": "台新Point(信用卡)",
+          "cap_period": "per_statement"
+        }
+      },
+      "calculation_hint": "級距門檻差額 = 30000 - 當期帳單新增消費金額（保費不列入門檻計算）；指定類別回饋 = 指定類別消費 × 級距回饋率（1.2%或0.2%）；一般類別回饋 = 一般類別消費 × 0.2%；每期回饋上限1,500點",
+      "time_basis": {
+        "qualification_date": "結帳日（結帳帳單適用）",
+        "window": "當期帳單",
+        "effective_period": "115/2/1~116/1/31結帳帳單適用"
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_二、活動辦法第2點方案內容表及四、注意事項(2)排除項目",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": "2026-02-01",
+      "valid_until": "2027-01-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "境外投資平台交易（如eToro或相類似境外投資交易平台）不予回饋",
+        "YouTube、Spotify、TikTok、Apple媒體服務（即消費明細含「APPLE.COM/BILL」者，例如iTunes、iCloud、App Store等）、Google產品或服務（即消費明細含「Google」者，例如Google Play、Google Drive等）不予回饋〈113/10/1（2024-10-01）起之消費日生效〉",
+        "特約商店分期付款交易及單筆消費分期0利率之交易不予回饋",
+        "歐盟地區實體商店交易不予回饋（指營業場所、商業登記地址或營業執照於歐盟地區國家，含奧地利、比利時、保加利亞等歐盟各國及英國、冰島、列支敦斯登、挪威；惟歐盟地區網站消費回饋維持不變）",
+        "電子票證（如悠遊卡）自動加值、Samsung Pay悠遊卡加值、e-tag儲值不予回饋",
+        "全聯福利中心消費（含PX Pay/全支付等支付工具綁定台新信用卡支付消費）不予回饋",
+        "便利商店（7-11、全家、萊爾富、OK超商）各型態之消費不予回饋",
+        "三商美邦保費/躉繳或彈性繳保費/投資型保費不予回饋",
+        "學費、水費、電費、瓦斯費、代繳中華電信費用、遠傳電信費用不予回饋",
+        "藥安康藥局消費、臺北醫學大學附設醫院費用不予回饋",
+        "路邊停車費（臺北市、新北市、桃園市、新竹市、臺中市、臺南市、高雄市）不予回饋",
+        "預借現金、預借現金手續費、預借現金分期金、預借現金分期金手續費、代償他行信用卡/現金卡/小額信貸等之代償金額不予回饋",
+        "個人綜合所得稅、所得稅分期付款期金、所得稅分期付款手續費、查核定稅（房屋稅、地價稅、牌照稅）、燃料費、政府規費、違規罰鍰不予回饋",
+        "違約金、循環信用利息、基金交易、基金手續費、信用卡年費及一般信用卡相關手續費（如掛失手續費、調閱簽單手續費）不予回饋",
+        "透過各繳費平台（如e-Bill全國繳費、i繳費APP、醫指付APP、NCCC公務機關信用卡繳費平台等）使用全國繳費網平台、電子化繳費稅處理平台機制繳納之費用不予回饋",
+        "透過「聯合信用卡處理中心」提供之信用卡小額支付特約商店之消費（如停車場、麥當勞等同性質連鎖速食店等）之各項費用不予回饋",
+        "保險費因已另提供級距式回饋，不列入指定消費類別的累計消費門檻計算，亦不列入一般類別的消費回饋"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "本卡資訊整合自原文2個章節（二、活動辦法方案內容表、四、注意事項(2)），需確認跨段一致性",
+        "條件『指定類別消費級距NT$30,000(含)以上』信心不足：1.2%級距門檻係以當期帳單新增消費合計（不含保費）或僅指定類別消費累計判定，需依注意事項(4)舉例核對原文確認",
+        "回饋上限1,500點/期是否為指定類別與一般類別合計上限，需確認",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "INSURANCE_REBATE_DESIGNATED_001",
+      "topic": "消費回饋與排除項目",
+      "sub_topic": "保險費級距式回饋（最高1.2%、回饋無上限）",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "保費回饋", "點數回饋"],
+      "conditions": [
+        {
+          "field": "當期帳單該卡新增一般/保費消費金額（分期以期金計算）",
+          "operator": ">=",
+          "value": 30000,
+          "display": "當期帳單該卡新增一般/保費消費NT$30,000(含)以上，保費回饋1.2%",
+          "confidence": 0.9
+        },
+        {
+          "field": "當期帳單該卡新增一般/保費消費金額（分期以期金計算）",
+          "operator": "<=",
+          "value": 29999,
+          "display": "當期帳單該卡新增一般/保費消費NT$1~29,999，保費回饋0.2%",
+          "confidence": 0.9
+        }
+      ],
+      "result": "太陽卡/玫瑰卡全卡級於115/2/1~116/1/31結帳帳單適用保險費級距式回饋（台新Point(信用卡)）：當期帳單該卡新增一般/保費消費（分期以期金計算）達NT$30,000(含)以上，保費回饋1.2%；NT$1~29,999回饋0.2%，回饋無上限，四捨五入至個位數計算。指定消費可列入保費累消門檻，但保費本身不列入指定類別累計門檻、亦不列入一般類別回饋。回饋金以回饋於當期帳單為原則。",
+      "benefit": {
+        "type": "cashback",
+        "details": {
+          "rate": 0.012,
+          "cap": null,
+          "cap_currency": null,
+          "cap_period": null
+        }
+      },
+      "calculation_hint": "保費回饋級距門檻以當期帳單該卡新增一般/保費消費合計判定（指定消費可列入累消門檻，保費不列入指定類別門檻）；回饋金額 = 保費 × 級距回饋率，四捨五入至個位數；舉例：帳單35,000（指定消費5,000+保費30,000）→指定消費回饋0.2%、保費回饋1.2%；帳單30,000（指定消費10,000+保費20,000）→指定消費回饋0.2%、保費回饋1.2%",
+      "time_basis": {
+        "qualification_date": "入帳日（回饋以當期帳單為原則；保費入帳日與結帳日同一天則併入當期帳單回饋；結帳日適逢假日可能提前或延後至最近一個工作日）",
+        "window": "當期帳單",
+        "effective_period": "115/2/1~116/1/31結帳帳單適用"
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_四、優惠權益_保險費最高1.2%回饋無上限及注意事項(1)(3)(4)(5)",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.75,
+      "valid_from": "2026-02-01",
+      "valid_until": "2027-01-31",
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "須視投保之保險公司是否接受以台新太陽卡/玫瑰卡支付保險費",
+        "保費回饋不含國外保險交易、躉繳保費、彈性繳保費（111/2/7即2022-02-07起）",
+        "不含三商美邦所有類型保單（110/4/1起帳單，即110/3/2起入帳交易）及投資型保費（109/4/20起）；三商美邦人壽特定保單目前係指投資型商品、萬能壽險、個人傷害保險，未來將不定期更新，請以官網公告為主",
+        "保費不列入指定消費類別的累計消費門檻計算，亦不列入一般類別的消費回饋",
+        "若有保費退貨交易，保險退貨交易一律扣回0.2%，交易明細顯示為「扣回保險費回饋金」"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "本卡資訊整合自原文四、優惠權益表與注意事項(1)(3)(4)(5)多個段落，需確認跨段一致性",
+        "帳單交易明細含「保險費0.5%回饋」字樣，但本方案級距僅1.2%/0.2%，需確認0.5%回饋之適用情境是否屬其他方案",
+        "三商美邦人壽特定保單範圍將不定期更新，需以官網公告為主",
+        "太陽卡/玫瑰卡涵蓋多個卡等級（全卡級適用），具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "CITY_PARKING_DESIGNATED_001",
+      "topic": "交通與出行權益",
+      "sub_topic": "免費市區臨時停車",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "市區臨時停車"],
+      "conditions": [
+        {
+          "field": "適用方案",
+          "operator": "==",
+          "value": "指定套餐方案",
+          "display": "持適用指定套餐方案之太陽卡/玫瑰卡",
+          "confidence": 0.9
+        }
+      ],
+      "result": "太陽卡/玫瑰卡指定套餐方案附加優惠包含免費市區臨時停車服務，原文未載明免費次數、消費門檻與適用停車場，詳細規範需另行對照市區臨時停車權益相關文件。",
+      "benefit": {
+        "type": "parking",
+        "details": {
+          "max_times": null,
+          "max_days": null,
+          "per_use_limit_days": null,
+          "locations": null
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_二、活動辦法第2點方案內容表_附加優惠免費市區臨時停車",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "附加優惠有效期間原文未明示，需確認是否同活動期間115/2/1~116/1/31",
+        "免費市區臨時停車之次數、消費門檻與適用停車場原文未載，需對照市區臨時停車權益文件補充",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "CAR_WASH_DESIGNATED_001",
+      "topic": "其他附加權益",
+      "sub_topic": "免費加油站水刀洗車服務",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "水刀洗車服務"],
+      "conditions": [
+        {
+          "field": "適用方案",
+          "operator": "==",
+          "value": "指定套餐方案",
+          "display": "持適用指定套餐方案之太陽卡/玫瑰卡",
+          "confidence": 0.9
+        },
+        {
+          "field": "洗車服務內容",
+          "operator": "==",
+          "value": "依【信用卡】115年洗車權益文件規範",
+          "display": "加油站水刀洗車服務請參考【信用卡】115年洗車權益",
+          "confidence": 0.55
+        }
+      ],
+      "result": "太陽卡/玫瑰卡指定套餐方案附加優惠包含免費加油站水刀洗車服務，免費次數、消費門檻與適用站點等完整規範請參考【信用卡】115年洗車權益文件。",
+      "benefit": {
+        "type": "other",
+        "details": {
+          "service": "免費加油站水刀洗車服務",
+          "reference": "【信用卡】115年洗車權益"
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_四、優惠權益_加油站水刀洗車服務",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.7,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "引用『請參考【信用卡】115年洗車權益』，需跨文件確認完整條件（免費次數、消費門檻、適用站點）",
+        "權益有效期間原文未明示，需確認是否同活動期間115/2/1~116/1/31",
+        "條件『加油站水刀洗車服務請參考【信用卡】115年洗車權益』信心不足，需人工確認原文",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "AIRPORT_TRANSFER_DESIGNATED_001",
+      "topic": "交通與出行權益",
+      "sub_topic": "免費機場接送（正附卡合併計算，每卡限2趟/年）",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "機場接送"],
+      "conditions": [
+        {
+          "field": "適用方案",
+          "operator": "==",
+          "value": "指定套餐方案",
+          "display": "持適用指定套餐方案之太陽卡/玫瑰卡（指定卡別）",
+          "confidence": 0.9
+        },
+        {
+          "field": "每卡年度機場接送使用次數（正附卡合併計算）",
+          "operator": "<=",
+          "value": 2,
+          "display": "免費機場接送，正附卡合併計算，每卡限2趟/年",
+          "confidence": 0.9
+        },
+        {
+          "field": "完整服務條件",
+          "operator": "==",
+          "value": "依【信用卡】115年指定卡別機場接送【aeroride台灣快線】文件規範",
+          "display": "完整說明請參考【信用卡】115年指定卡別機場接送【aeroride台灣快線】-適用太陽/玫瑰卡指定卡別",
+          "confidence": 0.55
+        }
+      ],
+      "result": "太陽卡/玫瑰卡指定套餐方案類權益提供免費機場接/送服務，正附卡合併計算，每卡限2趟/年。預約方式、適用地區、消費門檻等完整說明請參考【信用卡】115年指定卡別機場接送【aeroride台灣快線】-適用太陽/玫瑰卡指定卡別。",
+      "benefit": {
+        "type": "other",
+        "details": {
+          "service": "免費機場接送（aeroride台灣快線）",
+          "max_trips_per_card_per_year": 2,
+          "primary_supplementary_combined": true
+        }
+      },
+      "calculation_hint": "剩餘可用趟數 = 2 - 該卡年度已使用趟數（正附卡合併計算）",
+      "time_basis": {
+        "qualification_date": null,
+        "window": "每年（每卡限2趟/年）",
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_二、活動辦法第2點方案內容表_類權益免費機場接送",
+      "source_tier": 3,
+      "source_specificity": "plan_level",
+      "confidence": 0.7,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "正附卡合併計算，每卡限2趟/年"
+      ],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "引用『完整說明請參考【信用卡】115年指定卡別機場接送【aeroride台灣快線】』，需跨文件確認預約方式、適用地區、消費門檻等完整條件",
+        "每卡限2趟(/年)之「年」起訖與權益有效期間原文未明示，需確認",
+        "條件『完整說明請參考aeroride台灣快線文件』信心不足，需人工確認原文",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "TRAVEL_INSURANCE_DESIGNATED_001",
+      "topic": "其他附加權益",
+      "sub_topic": "旅遊綜合保險",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "旅遊綜合保險"],
+      "conditions": [
+        {
+          "field": "適用方案",
+          "operator": "==",
+          "value": "指定套餐方案",
+          "display": "持適用指定套餐方案之太陽卡/玫瑰卡",
+          "confidence": 0.9
+        },
+        {
+          "field": "旅遊綜合保險內容",
+          "operator": "==",
+          "value": "依各卡等級現行規範",
+          "display": "旅遊綜合保險依各卡等級現行規範，請參考【信用卡】115年度旅遊綜合保險&購物保障",
+          "confidence": 0.55
+        }
+      ],
+      "result": "太陽卡/玫瑰卡指定套餐方案之旅遊綜合保險依各卡等級現行規範提供，保障內容與額度依持卡人卡片等級而異，完整內容請參考【信用卡】115年度旅遊綜合保險&購物保障文件。",
+      "benefit": {
+        "type": "other",
+        "details": {
+          "service": "旅遊綜合保險",
+          "basis": "依各卡等級現行規範",
+          "reference": "【信用卡】115年度旅遊綜合保險&購物保障"
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_四、優惠權益_旅遊綜合保險",
+      "source_tier": 3,
+      "source_specificity": "general",
+      "confidence": 0.7,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "引用『依各卡等級現行規範，請參考【信用卡】115年度旅遊綜合保險&購物保障』，需跨文件確認各卡等級保障內容",
+        "權益有效期間原文未明示，需確認是否同115年度",
+        "條件『旅遊綜合保險依各卡等級現行規範』信心不足，需人工確認原文",
+        "旅遊綜合保險依各卡等級而異，太陽卡/玫瑰卡各等級對應保障需對照卡號前8碼直查表與卡等確認"
+      ]
+    },
+    {
+      "card_id": "SUPPLEMENTARY_CARD_DESIGNATED_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "附卡權益方案歸屬（跟隨原正卡權益）",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案", "自由選方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "自由選方案"],
+      "conditions": [
+        {
+          "field": "卡片類型",
+          "operator": "==",
+          "value": "附卡",
+          "display": "客戶持有之卡片為附卡（如105/10/15於原自由選正卡下加辦之附卡）",
+          "confidence": 0.9
+        },
+        {
+          "field": "正卡適用權益",
+          "operator": "==",
+          "value": "自由選",
+          "display": "原正卡已適用自由選權益",
+          "confidence": 0.9
+        }
+      ],
+      "result": "附卡權益適用原正卡之權益方案：若原正卡已適用自由選權益，後續加辦之附卡亦適用原正卡自由選權益，不會因加辦時間而改為指定套餐方案。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_五、Q&A第2題附卡權益歸屬",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "customer",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "Q&A僅說明正卡為自由選之情境，正卡為指定套餐時附卡權益歸屬可比照推論但需確認",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    },
+    {
+      "card_id": "NOTIFICATION_DESIGNATED_001",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "權益調整事前通知方式（客訴回應）",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案"],
+      "conditions": [
+        {
+          "field": "客戶反映事項",
+          "operator": "==",
+          "value": "未收到權益調整事前通知",
+          "display": "客戶詢問為什麼沒有事前通知調整成點數回饋",
+          "confidence": 0.9
+        }
+      ],
+      "result": "針對權益調整（如調整為點數回饋），台新皆有事前使用簡訊、Richart Life推播、EDM主動通知客戶，亦有於官網公告，客服可據此向客戶說明通知管道與公告事實。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260205太陽玫瑰卡權益指定套餐_五、Q&A第3題權益調整通知",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "通知方式為通案說明，個別客戶是否實際收到通知需查核發送紀錄",
+        "太陽卡/玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表"
+      ]
+    }
+  ]
+}
