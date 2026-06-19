@@ -1,0 +1,730 @@
+{
+  "cards": [
+    {
+      "card_id": "PLAN_QUERY_METHOD_FAQ_001",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "太陽玫瑰卡適用方案查詢方式",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案", "指定套餐方案", "切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案", "指定套餐方案", "切換刷方案"],
+      "conditions": [
+        {
+          "field": "客戶需求",
+          "operator": "==",
+          "value": "查詢適用方案",
+          "display": "客戶想查詢持卡適用【指定套餐】、【自由選】、【切換刷】何種方案",
+          "confidence": 0.95
+        }
+      ],
+      "result": "可引導客戶至台新官網智能客服（https://tsbk.tw/5vcb5m/）輸入卡號前8碼查詢適用方案；客服端可由 iCare 畫面判讀：套餐方案欄顯示「加油(新)」或「百貨(新)」其中一個即為指定套餐（原新權益），其餘皆為自由選（原舊權益）。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_一、查詢指定套餐自由選切換刷方式_官網卡號前8碼查詢與iCare畫面判讀",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "卡號前8碼對應方案僅供參考，實際仍依客戶實際設定為主，仍須參考 iCare 畫面各權益 KM"
+      ],
+      "audience": "both",
+      "actionability": "procedure",
+      "risk_flags": [
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_FORCE_SWITCH_FAQ_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "切換刷6個卡號113/6/28起強制轉換",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "切換刷方案"],
+      "conditions": [
+        {
+          "field": "卡號前8碼",
+          "operator": "in",
+          "value": ["3565-5811", "3565-5812", "5520-0366", "5149-1466", "5149-1470", "5520-0321"],
+          "display": "卡號前8碼屬切換刷方案之6個卡號（3565-5811、3565-5812、5520-0366、5149-1466、5149-1470、5520-0321）",
+          "confidence": 0.95
+        },
+        {
+          "field": "消費日期",
+          "operator": ">=",
+          "value": "2024-06-28",
+          "display": "113/6/28 後消費（全面回饋點數）",
+          "confidence": 0.95
+        }
+      ],
+      "result": "卡號前8碼屬切換刷方案6個卡號之太陽/玫瑰卡，113/6/28（2024-06-28）後消費一律適用【切換刷方案】；就算客戶於 6/27 前已變更成自由選方案，6/28 後系統仍會強制調整為切換刷方案。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": "消費日",
+        "window": null,
+        "effective_period": "113/6/28（2024-06-28）起"
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_一、查詢指定套餐自由選切換刷方式_卡號前8碼對應表與【重要】說明第2點",
+      "source_tier": 4,
+      "source_specificity": "card_specific",
+      "confidence": 0.95,
+      "valid_from": "2024-06-28",
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "113/6/27 前消費仍依當時設定之方案回饋現金/點數，不適用強制轉換"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_FORCE_SWITCH_FAQ_002",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "非切換刷卡號113/6/28後不強制調整方案",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案", "指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案", "指定套餐方案", "點數回饋"],
+      "conditions": [
+        {
+          "field": "卡號前8碼",
+          "operator": "not_in",
+          "value": ["3565-5811", "3565-5812", "5520-0366", "5149-1466", "5149-1470", "5520-0321"],
+          "display": "卡號前8碼非屬切換刷方案之6個卡號",
+          "confidence": 0.95
+        },
+        {
+          "field": "消費日期",
+          "operator": ">=",
+          "value": "2024-06-28",
+          "display": "113/6/28 後消費",
+          "confidence": 0.95
+        }
+      ],
+      "result": "除切換刷方案的6個卡號之外，其餘卡號於 113/6/28 後仍維持原本權益內容，僅回饋方式調整為點數回饋（全面回饋點數）；系統不會強制調整方案內容，卡號前8碼對應方案僅供參考，實際仍依客戶實際設定為主。例：客戶卡號前8碼為 4380-4554（屬指定套餐方案），但客戶已自行變更為自由選（舊權益），113/6/28 後仍會維持自由選，不會強制改為指定套餐。",
+      "benefit": {
+        "type": "points",
+        "details": {
+          "rate": null,
+          "unit": null,
+          "bonus_multiplier": null,
+          "cap": null
+        }
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": "消費日",
+        "window": null,
+        "effective_period": "113/6/28（2024-06-28）起"
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_一、查詢指定套餐自由選切換刷方式_卡號前8碼對應表與【重要】說明第1點",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.95,
+      "valid_from": "2024-06-28",
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "切換刷方案的6個卡號不在此限，6/28 後會被系統強制調整為切換刷方案"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_SWITCH_FAQ_001",
+      "topic": "申辦、異動與換卡",
+      "sub_topic": "自由選個案變更為指定套餐",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案", "指定套餐方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案", "指定套餐方案"],
+      "conditions": [
+        {
+          "field": "現行方案",
+          "operator": "==",
+          "value": "自由選方案",
+          "display": "客戶現行權益為自由選（原舊權益）",
+          "confidence": 0.95
+        },
+        {
+          "field": "欲變更方案",
+          "operator": "==",
+          "value": "指定套餐方案",
+          "display": "客戶想變更為指定套餐（原新權益）",
+          "confidence": 0.95
+        },
+        {
+          "field": "卡號前8碼",
+          "operator": "in",
+          "value": ["4380-4554", "4147-6321", "5520-0313", "4147-6366", "4380-4566"],
+          "display": "卡號前8碼須符合可由自由選改為指定套餐之5個卡號（4380-4554、4147-6321、5520-0313、4147-6366、4380-4566）",
+          "confidence": 0.95
+        },
+        {
+          "field": "已使用個案調整次數",
+          "operator": "==",
+          "value": 0,
+          "display": "客戶僅有一次調整機會",
+          "confidence": 0.9
+        }
+      ],
+      "result": "自由選（原舊權益）變更為指定套餐（原新權益）並非所有卡號都能個案變更，僅限5個指定卡號前8碼，且客戶僅有一次調整機會；作業方式：1、請組長於 Cybercard 更改；2、需於 MTMF 註記「個案調整太陽/玫瑰權益(自由選→指定套餐)」。不符合指定卡號前8碼者請直接婉拒客戶。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q1變更權益矩陣_指定套餐列自由選欄與可變更卡號註解",
+      "source_tier": 4,
+      "source_specificity": "card_specific",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "不符合指定5個卡號前8碼之客戶請直接婉拒，不可個案變更",
+        "除非客戶有付費權益需求，否則不要調整到付費大類別，以免產生額外費用"
+      ],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認",
+        "「客戶僅有一次調整機會」之計算基準（每卡或每人）原文未明示，需確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_SWITCH_FAQ_002",
+      "topic": "申辦、異動與換卡",
+      "sub_topic": "指定套餐及切換刷變更為自由選之限制",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["指定套餐方案", "切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "指定套餐方案", "切換刷方案", "自由選方案", "機場接送"],
+      "conditions": [
+        {
+          "field": "現行方案",
+          "operator": "in",
+          "value": ["指定套餐方案", "切換刷方案"],
+          "display": "客戶現行權益為指定套餐（原新權益）或切換刷（113/6/28 起消費適用）",
+          "confidence": 0.95
+        },
+        {
+          "field": "欲變更方案",
+          "operator": "==",
+          "value": "自由選方案",
+          "display": "客戶想變更為自由選（原舊權益）",
+          "confidence": 0.95
+        },
+        {
+          "field": "申請變更日期",
+          "operator": ">=",
+          "value": "2025-10-01",
+          "display": "114/10/1 起",
+          "confidence": 0.95
+        }
+      ],
+      "result": "指定套餐或切換刷方案自 114/10/1（2025-10-01）起不開放個案變更為自由選方案。原因：指定套餐的機場接送權益為認卡號前八碼，若個案變更為自由選權益，客戶會同時享有兩種方案的附加權益。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "114/10/1（2025-10-01）起"
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q1變更權益矩陣_自由選列指定套餐欄與切換刷欄",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": "2025-10-01",
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "內部訊息：指定套餐客戶亦可透過官網/行動銀行APP等自助管道調整為自由選，但一旦調整後即無法再透過自助管道調整回指定套餐"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "原文含但書「客戶亦可透過官網/行動銀行APP等自助管道調整為自由選」僅出現在指定套餐欄位，切換刷是否同樣可透過自助管道調整需確認",
+        "方案範圍跨越指定套餐與切換刷兩方案，需確認每方案是否均適用",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_SWITCH_FAQ_003",
+      "topic": "申辦、異動與換卡",
+      "sub_topic": "無法個案變更需重新申辦之方案組合",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案", "指定套餐方案", "切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案", "指定套餐方案", "切換刷方案"],
+      "conditions": [
+        {
+          "field": "方案變更組合",
+          "operator": "in",
+          "value": ["自由選→切換刷", "指定套餐→切換刷", "切換刷→指定套餐"],
+          "display": "客戶想由自由選或指定套餐變更為切換刷，或由切換刷變更為指定套餐",
+          "confidence": 0.9
+        }
+      ],
+      "result": "自由選或指定套餐變更為切換刷、以及切換刷變更為指定套餐，皆無法個案變更（【指定套餐】、【切換刷】兩個方案無法互相轉換）。如客戶抱怨，請依以下方式處理：1、113/7/1（2024-07-01）起重新申辦太陽/玫瑰卡；2、勾選欲使用之方案（切換刷方案或指定套餐方案）。官網於 113/7/1 起申辦太陽/玫瑰卡時可勾選【指定套餐】、【切換刷】。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "重新申辦自 113/7/1（2024-07-01）起適用"
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q1變更權益矩陣_切換刷相關欄位與注意事項1、2",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "自由選變更為指定套餐另有個案變更機制（限5個指定卡號前8碼、一次機會），不適用本卡之一律重新申辦處理"
+      ],
+      "audience": "both",
+      "actionability": "procedure",
+      "risk_flags": [
+        "本卡資訊整合自 Q1 注意事項與變更矩陣多個欄位，需確認跨段一致性",
+        "方案範圍跨越自由選、指定套餐、切換刷多個變更組合，需確認每組合是否均適用",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "FLEXSWIPE_HOLDING_FAQ_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "切換刷方案持卡張數限制",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "切換刷方案", "天天刷", "大筆刷"],
+      "conditions": [
+        {
+          "field": "同一客戶持有切換刷方案卡片數",
+          "operator": ">",
+          "value": 1,
+          "display": "客戶申辦多張切換刷方案之太陽卡/玫瑰卡",
+          "confidence": 0.95
+        }
+      ],
+      "result": "太陽卡、玫瑰卡「切換刷」方案不可同時持有多張卡片：天天刷/大筆刷是以【方案】判斷（切換刷為同方案），太陽卡、玫瑰卡合計僅能持有一張切換刷方案卡片；若客戶申辦多張，重複持有的卡別將於90天後停卡。例：可同時持有太陽卡指定套餐一張＋太陽卡切換刷一張；不可同時持有太陽卡切換刷一張＋玫瑰卡切換刷一張（同一名下只會適用一個方案）。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": "重複持有起算90天",
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q2切換刷方案是否可同時持有多張卡片",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.95,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "與其他方案併持不在此限：可同時持有同一卡別之指定套餐與切換刷各一張（如太陽卡指定套餐＋太陽卡切換刷）"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "PLAN_COEXIST_FAQ_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "自由選、指定套餐、切換刷三方案併持判斷",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案", "指定套餐方案", "切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案", "指定套餐方案", "切換刷方案"],
+      "conditions": [
+        {
+          "field": "自由選與指定套餐併持判斷依據",
+          "operator": "==",
+          "value": "卡別+卡號前八碼",
+          "display": "「自由選、指定套餐」是以【卡別+卡號前八碼】判斷（太陽卡跟玫瑰卡為不同卡別）",
+          "confidence": 0.9
+        },
+        {
+          "field": "同一卡別同時持有自由選與指定套餐",
+          "operator": "==",
+          "value": false,
+          "display": "不可同時持有同一卡別（如太陽卡）之自由選與指定套餐",
+          "confidence": 0.85
+        }
+      ],
+      "result": "太陽卡、玫瑰卡的「自由選、指定套餐、切換刷」三個方案可以同時持有：自由選與指定套餐是以【卡別+卡號前八碼】判斷（太陽卡跟玫瑰卡為不同卡別），可用不同卡別的方式申請。例：可同時持有太陽卡自由選一張＋玫瑰卡指定套餐一張＋太陽卡或玫瑰卡切換刷一張；不可同時持有太陽卡自由選一張＋太陽卡指定套餐一張＋太陽卡或玫瑰卡切換刷一張。另 113/7/1 起可同時持有不同方案的相同卡片。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q3三個方案是否可同時持有與Q1注意事項3",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "同一卡別之自由選與指定套餐不可併持",
+        "因自由選跟指定套餐有個案切換方案機制，會有太陽卡自由選＋太陽卡自由選（由指定套餐切換）的狀況，請勿用方案來判斷"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "Q1注意事項3「113/7/1起可同時持有不同方案的相同卡片」與Q3範例「不可同時持有太陽卡自由選＋太陽卡指定套餐」的適用範圍存在張力，需確認「不同方案的相同卡片」是否僅指切換刷與其他方案之組合",
+        "本卡資訊整合自原文 2 個章節（Q1注意事項、Q3），需確認跨段一致性",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "FLEXSWIPE_SUSPEND_FAQ_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "切換刷方案持有兩張以上之停卡邏輯",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "切換刷方案", "天天刷", "大筆刷"],
+      "conditions": [
+        {
+          "field": "持有切換刷方案卡片數",
+          "operator": ">=",
+          "value": 2,
+          "display": "持有「切換刷方案」兩張(含以上)之太陽/玫瑰卡",
+          "confidence": 0.95
+        },
+        {
+          "field": "卡號前八碼",
+          "operator": "in",
+          "value": "切換刷方案共8張卡號前八碼（含6/28強制轉換6個卡號＋113/7/1起新申辦卡號，新申辦卡號未列於本文件）",
+          "display": "以【卡號前八碼】判斷（含 6/28 強制轉換＋7/1 起新申辦共 8 張卡號）",
+          "confidence": 0.55
+        }
+      ],
+      "result": "持有兩張(含以上)切換刷方案太陽/玫瑰卡時，停卡邏輯以【卡號前八碼】判斷：(1) 第90天停用較早核准的卡片，僅保留最新核准的「一張」；(2) 若同天核准，將優先停用沒開卡的卡片；(3) 如果89天內有2張以上都開卡或都沒開卡，則依以下順序停卡：A、同一國際組織下保留高等級卡；B、同等級多卡保留有悠遊功能卡；C、同等級且二卡都未有悠遊功能或二卡皆有悠遊功能，則保留順序為 VISA > MasterCard > JCB。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": "核准日",
+        "window": "核准後90天",
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q4切換刷方案兩張以上停卡邏輯",
+      "source_tier": 4,
+      "source_specificity": "card_specific",
+      "confidence": 0.8,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "若同天核准，優先停用沒開卡的卡片，不適用「停用較早核准卡片」原則"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "引用「含 6/28 強制轉換＋7/1 起新申辦共 8 張卡號」，113/7/1 起新申辦之卡號前八碼未於本文件列出，需跨段確認完整卡號清單",
+        "條件「以【卡號前八碼】判斷（含 6/28 強制轉換＋7/1 起新申辦共 8 張卡號）」信心不足，需人工確認原文",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "FLEXSWIPE_DAILY_PLAN_FAQ_001",
+      "topic": "權益方案與資格限制",
+      "sub_topic": "切換刷方案 by ID 歸戶與每日方案適用",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "切換刷方案", "天天刷", "大筆刷"],
+      "conditions": [
+        {
+          "field": "持有切換刷方案卡片數",
+          "operator": ">=",
+          "value": 2,
+          "display": "客戶持有多張「切換刷方案」卡片",
+          "confidence": 0.95
+        },
+        {
+          "field": "同方案不同卡別舊卡停用依據",
+          "operator": "==",
+          "value": "承Q4卡號前八碼停卡邏輯",
+          "display": "同方案卡別會於90天後停用舊卡（承 Q4.說明）",
+          "confidence": 0.55
+        }
+      ],
+      "result": "客戶持有多張切換刷方案卡片時，不可依卡別選擇不同方案：申辦時系統只會檢核同卡別不能重複申辦，不會阻擋同方案不同卡別申請，惟客戶申辦後，同方案卡別會於90天後停用舊卡。天天刷或大筆刷為 by ID 歸戶，同一個正卡人不論持有幾張切換刷卡片，每日僅能適用一個方案。例：客戶加辦玫瑰卡天天刷，加上原本持有的太陽卡天天刷共兩張卡，若將玫瑰卡方案切換為「大筆刷」，則太陽卡亦會同步適用「大筆刷」方案，且無法同天切換第二次。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": "申辦後90天",
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q5多張切換刷卡片是否可依卡別選擇不同方案",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.8,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [
+        "每日僅能適用一個方案，且無法同一天切換方案第二次"
+      ],
+      "audience": "both",
+      "actionability": "answer_only",
+      "risk_flags": [
+        "引用「承 Q4.說明」，90天停用舊卡之完整邏輯需跨段參照 Q4 停卡規則卡（FLEXSWIPE_SUSPEND_FAQ_001）",
+        "條件「同方案卡別會於90天後停用舊卡（承 Q4.說明）」信心不足，需人工確認原文",
+        "原文範例出現「天筆刷」字樣，疑為「大筆刷」之誤植，需確認",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "FREECHOICE_SETTING_QUERY_FAQ_001",
+      "topic": "系統操作與異常客訴處理",
+      "sub_topic": "查詢113/6/28前自由選方案原始設定",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["切換刷方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "切換刷方案", "天天刷", "大筆刷", "自由選方案"],
+      "conditions": [
+        {
+          "field": "客戶現行方案",
+          "operator": "in",
+          "value": ["天天刷", "大筆刷"],
+          "display": "客戶是天天刷/大筆刷方案卡片",
+          "confidence": 0.95
+        },
+        {
+          "field": "查詢需求",
+          "operator": "==",
+          "value": "113/6/28前自由選方案設定",
+          "display": "客戶想知道自己 6/28 前自由選方案設定",
+          "confidence": 0.55
+        }
+      ],
+      "result": "客戶為天天刷/大筆刷方案卡片，想查詢自己 113/6/28 前的自由選方案設定時，客服請參考附件「EXCEL 表_自由選原始設定」：套餐參考 B 欄位，權益參考 D~I 欄位。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": null
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_二、Q&A_Q6查詢6/28前自由選方案設定",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.8,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "引用「附件 EXCEL 表_自由選原始設定」，查詢結果完全依賴附件，需確認附件可取得且為最新版本",
+        "條件「客戶想知道自己 6/28 前自由選方案設定」信心不足，需人工確認附件欄位對應（套餐B欄、權益D~I欄）是否仍正確",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    },
+    {
+      "card_id": "FREECHOICE_APPLY_STOP_FAQ_001",
+      "topic": "申辦、異動與換卡",
+      "sub_topic": "自由選方案停止官網進件與紙本進件查核",
+      "product_group": "信用卡",
+      "applicable_cards": ["太陽卡", "玫瑰卡"],
+      "applicable_cards_detail": {
+        "includes": [],
+        "excludes": [],
+        "ambiguous": []
+      },
+      "applicable_plans": ["自由選方案"],
+      "rule_family": ["太陽卡", "玫瑰卡", "自由選方案"],
+      "conditions": [
+        {
+          "field": "申辦方案",
+          "operator": "==",
+          "value": "自由選方案",
+          "display": "客戶欲申辦自由選方案",
+          "confidence": 0.95
+        },
+        {
+          "field": "進件管道",
+          "operator": "==",
+          "value": "紙本填寫type",
+          "display": "透過紙本填寫 type（TYP）申辦進件",
+          "confidence": 0.9
+        }
+      ],
+      "result": "自由選方案自 111 年 5 月（2022 年 5 月）起已無法官網進件；如透過紙本填寫 type 申辦進件時，請務必先查詢【信用卡】卡別明細表(APTL/Card Type)，含查詢停止進件的信用卡、信用卡規格，避免有些卡片下架後已無庫存而無法發卡。",
+      "benefit": {
+        "type": null,
+        "details": null
+      },
+      "calculation_hint": null,
+      "time_basis": {
+        "qualification_date": null,
+        "window": null,
+        "effective_period": "111/5（2022年5月）起停止官網進件"
+      },
+      "source": "20260203太陽玫瑰自由選指定套餐天天刷共通問題_一、查詢方式後內部訊息與Q1後內部訊息_自由選停止官網進件",
+      "source_tier": 4,
+      "source_specificity": "plan_level",
+      "confidence": 0.85,
+      "valid_from": null,
+      "valid_until": null,
+      "supersedes": null,
+      "archived": false,
+      "bank_scope": null,
+      "flow_id": null,
+      "exceptions": [],
+      "audience": "internal",
+      "actionability": "procedure",
+      "risk_flags": [
+        "停止官網進件時間原文僅標示「111/5 月起」無確切日期，valid_from 無法精確填寫，需確認生效日",
+        "太陽卡、玫瑰卡涵蓋多個卡等級，具體適用卡號需對照卡號前8碼直查表確認"
+      ]
+    }
+  ]
+}
