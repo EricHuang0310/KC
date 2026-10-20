@@ -1,0 +1,13 @@
+{
+  "name": "kg-model-validate",
+  "private": true,
+  "type": "module",
+  "description": "Validate kg_model/output/graph_model.json against Neo4j's graph-schema JSON spec",
+  "scripts": {
+    "validate": "node validate.mjs ../output/graph_model.json"
+  },
+  "dependencies": {
+    "@neo4j/graph-json-schema": "1.0.0-next.8",
+    "@neo4j/graph-schema-utils": "1.0.0-next.22"
+  }
+}
