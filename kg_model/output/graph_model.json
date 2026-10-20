@@ -1,0 +1,2291 @@
+{
+  "graphSchemaRepresentation": {
+    "version": "0.0.1",
+    "graphSchema": {
+      "nodeLabels": [
+        {
+          "$id": "nl:0",
+          "token": "CreditCard",
+          "properties": [
+            {
+              "$id": "p:0",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "卡別正式名稱（繁中原文），例如「太陽卡」「台新Richart卡」「國泰航空鈦金卡」。"
+            },
+            {
+              "$id": "p:1",
+              "token": "aliases",
+              "type": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nullable": true,
+              "description": "別名、舊名或簡稱，例如「原太陽卡/玫瑰卡(切換刷)」「賓士無限卡」。"
+            },
+            {
+              "$id": "p:2",
+              "token": "card_family",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "卡系列或聯名品牌，例如「太陽玫瑰系列」「Richart」「國泰航空聯名」「Mercedes-Benz聯名」「新光三越聯名」。"
+            },
+            {
+              "$id": "p:3",
+              "token": "is_cobrand",
+              "type": {
+                "type": "boolean"
+              },
+              "nullable": true,
+              "description": "是否為聯名卡。"
+            },
+            {
+              "$id": "p:4",
+              "token": "annual_fee",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "正卡／附卡年費說明，例如「正卡每年NT$4,500、附卡每年NT$4,500」。"
+            },
+            {
+              "$id": "p:5",
+              "token": "annual_fee_waiver",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "免年費條件與年費減免個案辦法摘要。"
+            },
+            {
+              "$id": "p:6",
+              "token": "issuing_status",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "發卡狀態：發行中／停止進件／已整併至其他卡別。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:1",
+          "token": "CardTier",
+          "properties": [
+            {
+              "$id": "p:7",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "卡等級名稱，統一以「卡」結尾，例如「御璽卡」「白金卡」。"
+            },
+            {
+              "$id": "p:8",
+              "token": "tier_group",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "文件中的分組說法，例如「一般卡別：御璽/鈦金/晶緻卡」「白金卡級以下」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:2",
+          "token": "CardBIN",
+          "properties": [
+            {
+              "$id": "p:9",
+              "token": "bin",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "8 位數字、不含連字號，例如「41476321」。"
+            },
+            {
+              "$id": "p:10",
+              "token": "network",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "國際組織：Visa／MasterCard／JCB（4 開頭為 Visa、5 開頭為 MasterCard、35 開頭為 JCB）。"
+            },
+            {
+              "$id": "p:11",
+              "token": "org_code",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "ORG 代碼，例如「001」。"
+            },
+            {
+              "$id": "p:12",
+              "token": "type_code",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "TYPE 代碼，例如「775」。"
+            },
+            {
+              "$id": "p:13",
+              "token": "e_ticket",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "電子票證功能，例如「悠遊卡」「一卡通」；無則留空。"
+            },
+            {
+              "$id": "p:14",
+              "token": "note",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "特殊說明，例如「113/6/28 後強制轉為切換刷方案」「可由自由選個案改為指定套餐」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:3",
+          "token": "RewardPlan",
+          "properties": [
+            {
+              "$id": "p:15",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "方案名稱（原文），例如「指定套餐」「天天刷」「行動生活」「簡單雙享」。"
+            },
+            {
+              "$id": "p:16",
+              "token": "plan_level",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "方案層級：方案大類／子方案／套餐選項。"
+            },
+            {
+              "$id": "p:17",
+              "token": "description",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "方案內容摘要，例如「加油/汽修+餐廳+電信費」。"
+            },
+            {
+              "$id": "p:18",
+              "token": "switch_rule",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "切換或選擇方式與限制，例如「正卡人每日23:59前透過Richart Life APP切換，每日限一次，ID歸戶」。"
+            },
+            {
+              "$id": "p:19",
+              "token": "change_policy",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "可否變更方案及個案變更規定，例如「114/10/1起不開放個案變更」。"
+            },
+            {
+              "$id": "p:20",
+              "token": "valid_from",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "活動或方案適用起日（ISO 日期）。"
+            },
+            {
+              "$id": "p:21",
+              "token": "valid_to",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "活動或方案適用迄日（ISO 日期）。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:4",
+          "token": "RewardRule",
+          "properties": [
+            {
+              "$id": "p:22",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "規則唯一名稱，格式「<方案或卡別>-<消費範圍>-<回饋率>%」，例如「指定套餐-指定類別滿3萬-1.2%」「天天刷-指定通路-3.3%」。"
+            },
+            {
+              "$id": "p:23",
+              "token": "reward_rate",
+              "type": {
+                "type": "float"
+              },
+              "nullable": false,
+              "description": "回饋率百分比數值，例如 1.2、3.8。"
+            },
+            {
+              "$id": "p:24",
+              "token": "reward_type",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "回饋形式：台新Point(信用卡)／現金回饋／刷卡金。"
+            },
+            {
+              "$id": "p:25",
+              "token": "spend_scope",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "消費範圍：指定消費／一般消費／保費／海外消費／不限類別。"
+            },
+            {
+              "$id": "p:26",
+              "token": "min_spend",
+              "type": {
+                "type": "integer"
+              },
+              "nullable": true,
+              "description": "適用級距下限（新臺幣元），例如滿 3 萬寫 30000、1~29,999 寫 1。"
+            },
+            {
+              "$id": "p:27",
+              "token": "max_spend",
+              "type": {
+                "type": "integer"
+              },
+              "nullable": true,
+              "description": "適用級距上限（新臺幣元），例如 29999；無上限留空。"
+            },
+            {
+              "$id": "p:28",
+              "token": "reward_cap",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "回饋上限，例如「每期1,500點台新Point」「無上限」「永久信用額度加計NT$30萬為限」。"
+            },
+            {
+              "$id": "p:29",
+              "token": "calculation",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "計算方式，例如「當期帳單正附卡合併、四捨五入」「逐筆計算、小數點無條件捨去、ID歸戶」。"
+            },
+            {
+              "$id": "p:30",
+              "token": "eligibility",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "其他適用條件，例如「需完成台新帳戶自動扣繳（LEVEL 2）」「限臺灣地區新臺幣交易」。"
+            },
+            {
+              "$id": "p:31",
+              "token": "valid_from",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "適用起日（ISO 日期）。"
+            },
+            {
+              "$id": "p:32",
+              "token": "valid_to",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "適用迄日（ISO 日期）。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:5",
+          "token": "Benefit",
+          "properties": [
+            {
+              "$id": "p:33",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "權益名稱（統一名稱），例如「國際機場週邊停車」「市區臨時停車」「加油站水刀洗車」「機場接送」。"
+            },
+            {
+              "$id": "p:34",
+              "token": "category",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "權益類型：停車／接送／洗車／保險／貴賓室／道路救援／通知服務／回饋。"
+            },
+            {
+              "$id": "p:35",
+              "token": "description",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "權益內容摘要。"
+            },
+            {
+              "$id": "p:36",
+              "token": "usage_method",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "使用方式，例如「持實體卡與出國證明過卡檢核」「至全鋒洗金寶官網驗證身分領取電子憑證」。"
+            },
+            {
+              "$id": "p:37",
+              "token": "effective_rule",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "生效時點規則，例如「申請變更之近一個營業日次日15:00起生效」。"
+            },
+            {
+              "$id": "p:38",
+              "token": "valid_from",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "權益期間起日（ISO 日期）。"
+            },
+            {
+              "$id": "p:39",
+              "token": "valid_to",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "權益期間迄日（ISO 日期）。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:6",
+          "token": "BenefitTerm",
+          "properties": [
+            {
+              "$id": "p:40",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "條款唯一名稱，格式「<卡別/卡等級/方案>-<權益名稱>」，例如「環球無限卡-國際機場週邊停車」「白金卡-旅遊不便險」。"
+            },
+            {
+              "$id": "p:41",
+              "token": "spend_threshold",
+              "type": {
+                "type": "integer"
+              },
+              "nullable": true,
+              "description": "消費門檻金額（新臺幣元），例如 30000、12000；「任刷一筆」寫 1。"
+            },
+            {
+              "$id": "p:42",
+              "token": "threshold_rule",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "門檻條件原文摘要，例如「使用前3個月內(含使用當月)刷卡支付當次機票/旅遊團費合計達NT$30,000」。"
+            },
+            {
+              "$id": "p:43",
+              "token": "lookback_months",
+              "type": {
+                "type": "integer"
+              },
+              "nullable": true,
+              "description": "消費檢核回推月數，例如 6、3。"
+            },
+            {
+              "$id": "p:44",
+              "token": "usage_limit",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "次數上限原文，例如「每年2次」「無限次」「每期1次」「每卡每日1次」。"
+            },
+            {
+              "$id": "p:45",
+              "token": "usage_limit_count",
+              "type": {
+                "type": "integer"
+              },
+              "nullable": true,
+              "description": "次數上限數值；無限次留空。"
+            },
+            {
+              "$id": "p:46",
+              "token": "quota",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "每次可享額度，例如「5天/次」「每日2小時、每期10小時」「班機延誤每一事故1萬」。"
+            },
+            {
+              "$id": "p:47",
+              "token": "holder_scope",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "正附卡適用範圍，例如「限正卡人」「正附卡合併計算」「同一ID同時僅能使用一張」。"
+            },
+            {
+              "$id": "p:48",
+              "token": "valid_from",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "條款適用起日（ISO 日期）。"
+            },
+            {
+              "$id": "p:49",
+              "token": "valid_to",
+              "type": {
+                "type": "date"
+              },
+              "nullable": true,
+              "description": "條款適用迄日（ISO 日期）。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:7",
+          "token": "SpendingCategory",
+          "properties": [
+            {
+              "$id": "p:50",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "類別名稱（原文），例如「加油/汽車保修」「航旅消費」「eTag自動儲值」。"
+            },
+            {
+              "$id": "p:51",
+              "token": "definition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "類別定義或認列範圍，例如「全臺加油站、汽車維修、汽車百貨精品之消費及eTag自動儲值」。"
+            },
+            {
+              "$id": "p:52",
+              "token": "mcc_codes",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "對應的 MCC 代碼條件，例如「3000~3299, 4511, 4582, 4722, 4723, 5962, 7991, 7011, 7922」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:8",
+          "token": "Merchant",
+          "properties": [
+            {
+              "$id": "p:53",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "商店或通路名稱（原文）。"
+            },
+            {
+              "$id": "p:54",
+              "token": "aliases",
+              "type": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nullable": true,
+              "description": "別名，例如「酷澎」「Coupang」。"
+            },
+            {
+              "$id": "p:55",
+              "token": "recognition_rule",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "認列方式，例如「以信用卡簽單商店名稱判斷，店中店不加碼」「限臺灣地區門市消費」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:9",
+          "token": "PaymentMethod",
+          "properties": [
+            {
+              "$id": "p:56",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "支付工具名稱（原文）。"
+            },
+            {
+              "$id": "p:57",
+              "token": "note",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "限制或注意事項，例如「超商綁定台新Pay單筆限額NT$3,000」「115/1/1起不適用假日刷加碼」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:10",
+          "token": "Partner",
+          "properties": [
+            {
+              "$id": "p:58",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "廠商統一名稱。"
+            },
+            {
+              "$id": "p:59",
+              "token": "service_type",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "服務類型：機場停車／市區停車／洗車／機場接送／保險／道路救援。"
+            },
+            {
+              "$id": "p:60",
+              "token": "phone",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "對外客服專線，例如「(02)2775-9359」。"
+            },
+            {
+              "$id": "p:61",
+              "token": "website",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "官方網站或預約網址。"
+            },
+            {
+              "$id": "p:62",
+              "token": "service_hours",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "客服或營業時間。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:11",
+          "token": "ServiceLocation",
+          "properties": [
+            {
+              "$id": "p:63",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "場站名稱（原文）。"
+            },
+            {
+              "$id": "p:64",
+              "token": "location_type",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "場站類型：機場外圍停車場／市區停車場／洗車場。"
+            },
+            {
+              "$id": "p:65",
+              "token": "address",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "地址。"
+            },
+            {
+              "$id": "p:66",
+              "token": "phone",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "場站電話。"
+            },
+            {
+              "$id": "p:67",
+              "token": "opening_hours",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "營業時間。"
+            },
+            {
+              "$id": "p:68",
+              "token": "member_price",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "台新卡友價或超出免費天數的收費，例如「每日200元」。"
+            },
+            {
+              "$id": "p:69",
+              "token": "is_announced",
+              "type": {
+                "type": "boolean"
+              },
+              "nullable": true,
+              "description": "是否為對外公告的配合場站（「不對外公告」「洽談中」為 false）。"
+            },
+            {
+              "$id": "p:70",
+              "token": "service_notes",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "現場服務說明，例如「航站與停車場間免費接駁、不需留車輛鑰匙、可停休旅車」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:12",
+          "token": "Airport",
+          "properties": [
+            {
+              "$id": "p:71",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "機場正式名稱，統一用「臺中清泉崗機場」「高雄小港國際機場」等全名。"
+            },
+            {
+              "$id": "p:72",
+              "token": "iata_code",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "IATA 代碼（文件有提到才填），例如 TPE、TSA、RMQ、KHH。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:13",
+          "token": "Region",
+          "properties": [
+            {
+              "$id": "p:73",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "縣市名稱，「台」統一寫成「臺」，例如「臺北市」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:14",
+          "token": "Procedure",
+          "properties": [
+            {
+              "$id": "p:74",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "程序唯一名稱，格式「<主題>-<情境>」。"
+            },
+            {
+              "$id": "p:75",
+              "token": "procedure_type",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "程序類型：個案處理／出單／系統異常處理／補點補回饋／方案變更／話術。"
+            },
+            {
+              "$id": "p:76",
+              "token": "trigger_condition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "適用情境，例如「航旅消費未達檻」「廠商電話無法撥通」。"
+            },
+            {
+              "$id": "p:77",
+              "token": "steps",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "處理步驟摘要（依序）。"
+            },
+            {
+              "$id": "p:78",
+              "token": "approver",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "授權或裁示角色，例如「客服」「客服組長」「客服主管」「PM」「帳務」；不要寫人名。"
+            },
+            {
+              "$id": "p:79",
+              "token": "limit",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "次數限制，例如「每人一生一次（含Never Say No）」「115/1/1~6/30間2次」。"
+            },
+            {
+              "$id": "p:80",
+              "token": "memo_format",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "MTMF/MEMO 註記格式，例如「X年X月個案提供機場停車+原因」。"
+            },
+            {
+              "$id": "p:81",
+              "token": "script",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "對客戶的說明話術摘要。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:15",
+          "token": "InternalSystem",
+          "properties": [
+            {
+              "$id": "p:82",
+              "token": "name",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "系統或管道名稱（原文）。"
+            },
+            {
+              "$id": "p:83",
+              "token": "system_type",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "類型：內部系統／工單／客戶自助管道。"
+            },
+            {
+              "$id": "p:84",
+              "token": "usage",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "用途，例如「查詢客戶目前方案（加油(新)/百貨(新)為指定套餐）」。"
+            }
+          ]
+        },
+        {
+          "$id": "nl:16",
+          "token": "FAQ",
+          "properties": [
+            {
+              "$id": "p:85",
+              "token": "question",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "問題原文（去掉「Q1：」等編號）。"
+            },
+            {
+              "$id": "p:86",
+              "token": "answer",
+              "type": {
+                "type": "string"
+              },
+              "nullable": false,
+              "description": "答案摘要，保留關鍵條件、金額與例外。"
+            }
+          ]
+        }
+      ],
+      "relationshipTypes": [
+        {
+          "$id": "rt:0",
+          "token": "HAS_TIER",
+          "properties": []
+        },
+        {
+          "$id": "rt:1",
+          "token": "HAS_BIN",
+          "properties": []
+        },
+        {
+          "$id": "rt:2",
+          "token": "MAPPED_TO_PLAN",
+          "properties": [
+            {
+              "$id": "p:87",
+              "token": "condition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "對應條件或生效時間，例如「113/6/28後強制調整」。"
+            }
+          ]
+        },
+        {
+          "$id": "rt:3",
+          "token": "OFFERS_PLAN",
+          "properties": []
+        },
+        {
+          "$id": "rt:4",
+          "token": "SUB_PLAN_OF",
+          "properties": []
+        },
+        {
+          "$id": "rt:5",
+          "token": "CAN_CHANGE_TO",
+          "properties": [
+            {
+              "$id": "p:88",
+              "token": "condition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "變更條件，例如「僅限特定卡號前8碼、一次機會、由組長於Cybercard變更」「不開放」。"
+            }
+          ]
+        },
+        {
+          "$id": "rt:6",
+          "token": "HAS_REWARD_RULE",
+          "properties": []
+        },
+        {
+          "$id": "rt:7",
+          "token": "INCLUDES_BENEFIT",
+          "properties": [
+            {
+              "$id": "p:89",
+              "token": "condition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "取得條件，例如「自由組合6選4」「需勾選且生效」。"
+            }
+          ]
+        },
+        {
+          "$id": "rt:8",
+          "token": "HAS_BENEFIT",
+          "properties": [
+            {
+              "$id": "p:90",
+              "token": "condition",
+              "type": {
+                "type": "string"
+              },
+              "nullable": true,
+              "description": "取得條件，例如「限指定套餐方案」「自由選需勾選國際機場週邊停車」。"
+            }
+          ]
+        },
+        {
+          "$id": "rt:9",
+          "token": "HAS_TERM",
+          "properties": []
+        },
+        {
+          "$id": "rt:10",
+          "token": "FOR_BENEFIT",
+          "properties": []
+        },
+        {
+          "$id": "rt:11",
+          "token": "APPLIES_TO",
+          "properties": []
+        },
+        {
+          "$id": "rt:12",
+          "token": "REQUIRES_PAYMENT",
+          "properties": []
+        },
+        {
+          "$id": "rt:13",
+          "token": "COUNTS_SPENDING",
+          "properties": []
+        },
+        {
+          "$id": "rt:14",
+          "token": "EXCLUDES",
+          "properties": []
+        },
+        {
+          "$id": "rt:15",
+          "token": "IN_CATEGORY",
+          "properties": []
+        },
+        {
+          "$id": "rt:16",
+          "token": "PROVIDED_BY",
+          "properties": []
+        },
+        {
+          "$id": "rt:17",
+          "token": "OPERATES",
+          "properties": []
+        },
+        {
+          "$id": "rt:18",
+          "token": "AVAILABLE_AT",
+          "properties": []
+        },
+        {
+          "$id": "rt:19",
+          "token": "SERVES_AIRPORT",
+          "properties": []
+        },
+        {
+          "$id": "rt:20",
+          "token": "LOCATED_IN",
+          "properties": []
+        },
+        {
+          "$id": "rt:21",
+          "token": "TRANSFER_AREA",
+          "properties": []
+        },
+        {
+          "$id": "rt:22",
+          "token": "MERGED_INTO",
+          "properties": []
+        },
+        {
+          "$id": "rt:23",
+          "token": "HANDLES",
+          "properties": []
+        },
+        {
+          "$id": "rt:24",
+          "token": "USES_SYSTEM",
+          "properties": []
+        },
+        {
+          "$id": "rt:25",
+          "token": "CONTACTS_PARTNER",
+          "properties": []
+        },
+        {
+          "$id": "rt:26",
+          "token": "ABOUT",
+          "properties": []
+        },
+        {
+          "$id": "rt:27",
+          "token": "REFERS_TO",
+          "properties": []
+        }
+      ],
+      "nodeObjectTypes": [
+        {
+          "$id": "n:0",
+          "labels": [
+            {
+              "$ref": "#nl:0"
+            }
+          ],
+          "description": "信用卡卡別（產品），例如太陽卡、玫瑰卡、台新Richart卡、環球無限卡、卓富無限卡、國泰航空世界卡、Mercedes-Benz無限卡、@GoGo卡、FlyGo卡。不含卡等級字樣時寫卡系列名稱。"
+        },
+        {
+          "$id": "n:1",
+          "labels": [
+            {
+              "$ref": "#nl:1"
+            }
+          ],
+          "description": "卡等級，例如無限卡、世界卡、御璽卡、鈦金卡、晶緻卡、白金卡、金卡、普卡、商務鈦金卡、商務御璽卡、企業卡。"
+        },
+        {
+          "$id": "n:2",
+          "labels": [
+            {
+              "$ref": "#nl:2"
+            }
+          ],
+          "description": "卡號前 8 碼（BIN），用來判斷卡片適用的方案或權益，例如太陽卡 41476321、玫瑰卡 41476366、Richart卡 51572173。"
+        },
+        {
+          "$id": "n:3",
+          "labels": [
+            {
+              "$ref": "#nl:3"
+            }
+          ],
+          "description": "回饋／權益方案，包含方案大類（自由選、指定套餐、切換刷）、切換刷子方案（Pay著刷、天天刷、大筆刷、好饗刷、數趣刷、玩旅刷、假日刷）、自由選套餐選項（行動生活、百貨血拚、旅行享樂、量販超市、虛擬網購、簡單回饋、自由組合、簡單雙享）。"
+        },
+        {
+          "$id": "n:4",
+          "labels": [
+            {
+              "$ref": "#nl:4"
+            }
+          ],
+          "description": "消費回饋規則：某方案或卡別在某消費範圍的回饋率、門檻與上限，例如「指定套餐指定類別滿3萬回饋1.2%」「Richart卡保費1.3%」「一般消費0.3%無上限」。"
+        },
+        {
+          "$id": "n:5",
+          "labels": [
+            {
+              "$ref": "#nl:5"
+            }
+          ],
+          "description": "權益或附加優惠項目（目錄層級），例如國際機場週邊停車、市區臨時停車、加油站水刀洗車、機場接送、國內機場貴賓室、24小時道路救援、旅遊不便險、旅遊平安險、海外旅遊全程保障保險、信用卡購物保障、消費簡訊、海外消費1%回饋、機車路邊停車。"
+        },
+        {
+          "$id": "n:6",
+          "labels": [
+            {
+              "$ref": "#nl:6"
+            }
+          ],
+          "description": "某卡別、卡等級或方案享有某權益的具體條款：消費門檻、檢核期間、次數、天數、時數或保額，例如「國泰航空鈦金卡-國際機場週邊停車：前6個月刷當次機票/團費達3萬，每年2次、每次5天」。"
+        },
+        {
+          "$id": "n:7",
+          "labels": [
+            {
+              "$ref": "#nl:7"
+            }
+          ],
+          "description": "消費類別或交易類型，包含回饋指定類別（加油/汽車保修、百貨公司、餐廳、電信費、超市）、權益門檻認列類別（航旅消費：機票/旅遊團費/指定訂房網站）、以及不回饋或不列入門檻的排除類別（學費、eTag自動儲值、保險費、預借現金、便利商店、全聯福利中心、各繳費平台交易）。"
+        },
+        {
+          "$id": "n:8",
+          "labels": [
+            {
+              "$ref": "#nl:8"
+            }
+          ],
+          "description": "特約商店、指定通路或品牌，例如7-11、全家、全聯福利中心、新光三越、遠東SOGO、IKEA、蝦皮、Agoda、Booking.com、中華航空、Uber。"
+        },
+        {
+          "$id": "n:9",
+          "labels": [
+            {
+              "$ref": "#nl:9"
+            }
+          ],
+          "description": "支付工具或交易方式，例如實體卡、台新Pay、台新Pay+、LINE Pay、Apple Pay、Google錢包、Samsung Pay、街口支付、台灣Pay、悠遊卡自動加值。"
+        },
+        {
+          "$id": "n:10",
+          "labels": [
+            {
+              "$ref": "#nl:10"
+            }
+          ],
+          "description": "權益合作廠商或保險公司，例如中興嘟嘟房、台灣聯通、24TPS永固便利、車麻吉(Autopass)、全勝出國停車場、富士捷、全鋒洗金寶、aeroride台灣快綫、新光產物保險。"
+        },
+        {
+          "$id": "n:11",
+          "labels": [
+            {
+              "$ref": "#nl:11"
+            }
+          ],
+          "description": "權益使用場站或據點，例如機場外圍停車場（全勝出國停車場、日月亭平安場、富士捷大園出國停車場、中興嘟嘟房機場周邊停車場、大程停車場、大鵬停車場、嘟嘟房台中機場二站）、市區停車場、洗車場站。"
+        },
+        {
+          "$id": "n:12",
+          "labels": [
+            {
+              "$ref": "#nl:12"
+            }
+          ],
+          "description": "機場，例如桃園國際機場、松山國際機場、臺中清泉崗機場、高雄小港國際機場。"
+        },
+        {
+          "$id": "n:13",
+          "labels": [
+            {
+              "$ref": "#nl:13"
+            }
+          ],
+          "description": "縣市或地區，用於場站所在地與機場接送免費指定區域，例如臺北市、新北市、桃園市、新竹縣市、臺中市、高雄市。"
+        },
+        {
+          "$id": "n:14",
+          "labels": [
+            {
+              "$ref": "#nl:14"
+            }
+          ],
+          "description": "客服作業程序：個案處理辦法、出單方式、系統異常處理、補點/補回饋、方案變更、客訴應對話術等，例如「機場停車-個案開放統一做法」「機場停車-離場過卡無法檢核且有進場紀錄」「自由選-回饋方式個案調整(點數改刷卡金)」。"
+        },
+        {
+          "$id": "n:15",
+          "labels": [
+            {
+              "$ref": "#nl:15"
+            }
+          ],
+          "description": "銀行內部系統、工單類型或客戶自助管道，例如iCare、Cybercard、MTMF、PCS白金過卡系統、IPS工單、SFA、Richart Life APP、台新官網智能客服、行動銀行APP。"
+        },
+        {
+          "$id": "n:16",
+          "labels": [
+            {
+              "$ref": "#nl:16"
+            }
+          ],
+          "description": "文件中的常見問答（Q&A），一題一個節點。"
+        }
+      ],
+      "relationshipObjectTypes": [
+        {
+          "$id": "r:0",
+          "type": {
+            "$ref": "#rt:0"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:1"
+          },
+          "description": "卡別或卡號前8碼所屬的卡等級。"
+        },
+        {
+          "$id": "r:1",
+          "type": {
+            "$ref": "#rt:0"
+          },
+          "from": {
+            "$ref": "#n:2"
+          },
+          "to": {
+            "$ref": "#n:1"
+          },
+          "description": "卡別或卡號前8碼所屬的卡等級。"
+        },
+        {
+          "$id": "r:2",
+          "type": {
+            "$ref": "#rt:1"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:2"
+          },
+          "description": "卡別擁有的卡號前8碼。"
+        },
+        {
+          "$id": "r:3",
+          "type": {
+            "$ref": "#rt:2"
+          },
+          "from": {
+            "$ref": "#n:2"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "卡號前8碼預設對應的方案（例如 41476321 → 指定套餐、太陽卡 6 個卡號 113/6/28 起強制轉切換刷）。"
+        },
+        {
+          "$id": "r:4",
+          "type": {
+            "$ref": "#rt:3"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "卡別提供或可選擇的方案。"
+        },
+        {
+          "$id": "r:5",
+          "type": {
+            "$ref": "#rt:4"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "子方案或套餐選項隸屬的上層方案，例如天天刷 → 切換刷、行動生活 → 自由選。"
+        },
+        {
+          "$id": "r:6",
+          "type": {
+            "$ref": "#rt:5"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "方案可變更（含個案變更）為另一方案。"
+        },
+        {
+          "$id": "r:7",
+          "type": {
+            "$ref": "#rt:6"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:4"
+          },
+          "description": "方案或卡別適用的回饋規則。"
+        },
+        {
+          "$id": "r:8",
+          "type": {
+            "$ref": "#rt:6"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:4"
+          },
+          "description": "方案或卡別適用的回饋規則。"
+        },
+        {
+          "$id": "r:9",
+          "type": {
+            "$ref": "#rt:7"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:5"
+          },
+          "description": "方案內含或可勾選的附加優惠，例如自由選「行動生活」含市區雙品牌臨時停車。"
+        },
+        {
+          "$id": "r:10",
+          "type": {
+            "$ref": "#rt:8"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:5"
+          },
+          "description": "卡別享有的權益。"
+        },
+        {
+          "$id": "r:11",
+          "type": {
+            "$ref": "#rt:9"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:6"
+          },
+          "description": "卡別、卡等級或方案擁有的權益條款。"
+        },
+        {
+          "$id": "r:12",
+          "type": {
+            "$ref": "#rt:9"
+          },
+          "from": {
+            "$ref": "#n:1"
+          },
+          "to": {
+            "$ref": "#n:6"
+          },
+          "description": "卡別、卡等級或方案擁有的權益條款。"
+        },
+        {
+          "$id": "r:13",
+          "type": {
+            "$ref": "#rt:9"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:6"
+          },
+          "description": "卡別、卡等級或方案擁有的權益條款。"
+        },
+        {
+          "$id": "r:14",
+          "type": {
+            "$ref": "#rt:10"
+          },
+          "from": {
+            "$ref": "#n:6"
+          },
+          "to": {
+            "$ref": "#n:5"
+          },
+          "description": "權益條款所屬的權益項目。"
+        },
+        {
+          "$id": "r:15",
+          "type": {
+            "$ref": "#rt:11"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:7"
+          },
+          "description": "回饋規則適用的消費類別或指定通路。"
+        },
+        {
+          "$id": "r:16",
+          "type": {
+            "$ref": "#rt:11"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:8"
+          },
+          "description": "回饋規則適用的消費類別或指定通路。"
+        },
+        {
+          "$id": "r:17",
+          "type": {
+            "$ref": "#rt:12"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:9"
+          },
+          "description": "回饋規則要求的支付工具（例如 Pay著刷限台新Pay綁定）。"
+        },
+        {
+          "$id": "r:18",
+          "type": {
+            "$ref": "#rt:13"
+          },
+          "from": {
+            "$ref": "#n:6"
+          },
+          "to": {
+            "$ref": "#n:7"
+          },
+          "description": "權益條款門檻認列的消費類別（例如機場停車門檻認列航旅消費）。"
+        },
+        {
+          "$id": "r:19",
+          "type": {
+            "$ref": "#rt:14"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:7"
+          },
+          "description": "回饋規則或權益門檻排除（不回饋／不列入計算）的消費類別、通路或支付工具。"
+        },
+        {
+          "$id": "r:20",
+          "type": {
+            "$ref": "#rt:14"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:8"
+          },
+          "description": "回饋規則或權益門檻排除（不回饋／不列入計算）的消費類別、通路或支付工具。"
+        },
+        {
+          "$id": "r:21",
+          "type": {
+            "$ref": "#rt:14"
+          },
+          "from": {
+            "$ref": "#n:4"
+          },
+          "to": {
+            "$ref": "#n:9"
+          },
+          "description": "回饋規則或權益門檻排除（不回饋／不列入計算）的消費類別、通路或支付工具。"
+        },
+        {
+          "$id": "r:22",
+          "type": {
+            "$ref": "#rt:14"
+          },
+          "from": {
+            "$ref": "#n:6"
+          },
+          "to": {
+            "$ref": "#n:7"
+          },
+          "description": "回饋規則或權益門檻排除（不回饋／不列入計算）的消費類別、通路或支付工具。"
+        },
+        {
+          "$id": "r:23",
+          "type": {
+            "$ref": "#rt:14"
+          },
+          "from": {
+            "$ref": "#n:6"
+          },
+          "to": {
+            "$ref": "#n:9"
+          },
+          "description": "回饋規則或權益門檻排除（不回饋／不列入計算）的消費類別、通路或支付工具。"
+        },
+        {
+          "$id": "r:24",
+          "type": {
+            "$ref": "#rt:15"
+          },
+          "from": {
+            "$ref": "#n:8"
+          },
+          "to": {
+            "$ref": "#n:7"
+          },
+          "description": "商店或通路所屬的消費類別。"
+        },
+        {
+          "$id": "r:25",
+          "type": {
+            "$ref": "#rt:16"
+          },
+          "from": {
+            "$ref": "#n:5"
+          },
+          "to": {
+            "$ref": "#n:10"
+          },
+          "description": "權益由哪個合作廠商提供。"
+        },
+        {
+          "$id": "r:26",
+          "type": {
+            "$ref": "#rt:17"
+          },
+          "from": {
+            "$ref": "#n:10"
+          },
+          "to": {
+            "$ref": "#n:11"
+          },
+          "description": "廠商經營的場站。"
+        },
+        {
+          "$id": "r:27",
+          "type": {
+            "$ref": "#rt:18"
+          },
+          "from": {
+            "$ref": "#n:5"
+          },
+          "to": {
+            "$ref": "#n:11"
+          },
+          "description": "權益可使用的場站。"
+        },
+        {
+          "$id": "r:28",
+          "type": {
+            "$ref": "#rt:18"
+          },
+          "from": {
+            "$ref": "#n:6"
+          },
+          "to": {
+            "$ref": "#n:11"
+          },
+          "description": "權益可使用的場站。"
+        },
+        {
+          "$id": "r:29",
+          "type": {
+            "$ref": "#rt:19"
+          },
+          "from": {
+            "$ref": "#n:11"
+          },
+          "to": {
+            "$ref": "#n:12"
+          },
+          "description": "場站服務的機場（機場外圍停車場 → 機場）。"
+        },
+        {
+          "$id": "r:30",
+          "type": {
+            "$ref": "#rt:20"
+          },
+          "from": {
+            "$ref": "#n:11"
+          },
+          "to": {
+            "$ref": "#n:13"
+          },
+          "description": "場站或機場所在縣市。"
+        },
+        {
+          "$id": "r:31",
+          "type": {
+            "$ref": "#rt:20"
+          },
+          "from": {
+            "$ref": "#n:12"
+          },
+          "to": {
+            "$ref": "#n:13"
+          },
+          "description": "場站或機場所在縣市。"
+        },
+        {
+          "$id": "r:32",
+          "type": {
+            "$ref": "#rt:21"
+          },
+          "from": {
+            "$ref": "#n:12"
+          },
+          "to": {
+            "$ref": "#n:13"
+          },
+          "description": "機場接送免費指定區域（機場 → 可免費接送的縣市）。"
+        },
+        {
+          "$id": "r:33",
+          "type": {
+            "$ref": "#rt:22"
+          },
+          "from": {
+            "$ref": "#n:0"
+          },
+          "to": {
+            "$ref": "#n:0"
+          },
+          "description": "舊卡別整併為新卡別，例如FlyGo卡、@GoGo卡、玫瑰Giving卡、太陽卡/玫瑰卡(切換刷)整併為台新Richart卡。"
+        },
+        {
+          "$id": "r:34",
+          "type": {
+            "$ref": "#rt:23"
+          },
+          "from": {
+            "$ref": "#n:14"
+          },
+          "to": {
+            "$ref": "#n:5"
+          },
+          "description": "作業程序處理的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:35",
+          "type": {
+            "$ref": "#rt:23"
+          },
+          "from": {
+            "$ref": "#n:14"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "作業程序處理的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:36",
+          "type": {
+            "$ref": "#rt:23"
+          },
+          "from": {
+            "$ref": "#n:14"
+          },
+          "to": {
+            "$ref": "#n:0"
+          },
+          "description": "作業程序處理的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:37",
+          "type": {
+            "$ref": "#rt:24"
+          },
+          "from": {
+            "$ref": "#n:14"
+          },
+          "to": {
+            "$ref": "#n:15"
+          },
+          "description": "作業程序或方案切換使用的系統或管道（例如在Cybercard扣點、在MTMF註記、在PCS變更機場停車資料、在Richart Life APP切換方案）。"
+        },
+        {
+          "$id": "r:38",
+          "type": {
+            "$ref": "#rt:24"
+          },
+          "from": {
+            "$ref": "#n:3"
+          },
+          "to": {
+            "$ref": "#n:15"
+          },
+          "description": "作業程序或方案切換使用的系統或管道（例如在Cybercard扣點、在MTMF註記、在PCS變更機場停車資料、在Richart Life APP切換方案）。"
+        },
+        {
+          "$id": "r:39",
+          "type": {
+            "$ref": "#rt:25"
+          },
+          "from": {
+            "$ref": "#n:14"
+          },
+          "to": {
+            "$ref": "#n:10"
+          },
+          "description": "作業程序需聯繫的廠商（例如個案需由客服致電停車場手抄、寄信台灣快綫代為預約）。"
+        },
+        {
+          "$id": "r:40",
+          "type": {
+            "$ref": "#rt:26"
+          },
+          "from": {
+            "$ref": "#n:16"
+          },
+          "to": {
+            "$ref": "#n:5"
+          },
+          "description": "常見問答涉及的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:41",
+          "type": {
+            "$ref": "#rt:26"
+          },
+          "from": {
+            "$ref": "#n:16"
+          },
+          "to": {
+            "$ref": "#n:3"
+          },
+          "description": "常見問答涉及的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:42",
+          "type": {
+            "$ref": "#rt:26"
+          },
+          "from": {
+            "$ref": "#n:16"
+          },
+          "to": {
+            "$ref": "#n:0"
+          },
+          "description": "常見問答涉及的權益、方案或卡別。"
+        },
+        {
+          "$id": "r:43",
+          "type": {
+            "$ref": "#rt:27"
+          },
+          "from": {
+            "$ref": "#n:16"
+          },
+          "to": {
+            "$ref": "#n:14"
+          },
+          "description": "常見問答引用的作業程序。"
+        }
+      ],
+      "constraints": [
+        {
+          "$id": "c:0",
+          "name": "CreditCard_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:0"
+          },
+          "properties": [
+            {
+              "$ref": "#p:0"
+            }
+          ]
+        },
+        {
+          "$id": "c:1",
+          "name": "CardTier_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:1"
+          },
+          "properties": [
+            {
+              "$ref": "#p:7"
+            }
+          ]
+        },
+        {
+          "$id": "c:2",
+          "name": "CardBIN_bin_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:2"
+          },
+          "properties": [
+            {
+              "$ref": "#p:9"
+            }
+          ]
+        },
+        {
+          "$id": "c:3",
+          "name": "RewardPlan_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:3"
+          },
+          "properties": [
+            {
+              "$ref": "#p:15"
+            }
+          ]
+        },
+        {
+          "$id": "c:4",
+          "name": "RewardRule_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:4"
+          },
+          "properties": [
+            {
+              "$ref": "#p:22"
+            }
+          ]
+        },
+        {
+          "$id": "c:5",
+          "name": "Benefit_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:5"
+          },
+          "properties": [
+            {
+              "$ref": "#p:33"
+            }
+          ]
+        },
+        {
+          "$id": "c:6",
+          "name": "BenefitTerm_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:6"
+          },
+          "properties": [
+            {
+              "$ref": "#p:40"
+            }
+          ]
+        },
+        {
+          "$id": "c:7",
+          "name": "SpendingCategory_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:7"
+          },
+          "properties": [
+            {
+              "$ref": "#p:50"
+            }
+          ]
+        },
+        {
+          "$id": "c:8",
+          "name": "Merchant_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:8"
+          },
+          "properties": [
+            {
+              "$ref": "#p:53"
+            }
+          ]
+        },
+        {
+          "$id": "c:9",
+          "name": "PaymentMethod_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:9"
+          },
+          "properties": [
+            {
+              "$ref": "#p:56"
+            }
+          ]
+        },
+        {
+          "$id": "c:10",
+          "name": "Partner_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:10"
+          },
+          "properties": [
+            {
+              "$ref": "#p:58"
+            }
+          ]
+        },
+        {
+          "$id": "c:11",
+          "name": "ServiceLocation_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:11"
+          },
+          "properties": [
+            {
+              "$ref": "#p:63"
+            }
+          ]
+        },
+        {
+          "$id": "c:12",
+          "name": "Airport_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:12"
+          },
+          "properties": [
+            {
+              "$ref": "#p:71"
+            }
+          ]
+        },
+        {
+          "$id": "c:13",
+          "name": "Region_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:13"
+          },
+          "properties": [
+            {
+              "$ref": "#p:73"
+            }
+          ]
+        },
+        {
+          "$id": "c:14",
+          "name": "Procedure_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:14"
+          },
+          "properties": [
+            {
+              "$ref": "#p:74"
+            }
+          ]
+        },
+        {
+          "$id": "c:15",
+          "name": "InternalSystem_name_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:15"
+          },
+          "properties": [
+            {
+              "$ref": "#p:82"
+            }
+          ]
+        },
+        {
+          "$id": "c:16",
+          "name": "FAQ_question_uniq",
+          "constraintType": "uniqueness",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:16"
+          },
+          "properties": [
+            {
+              "$ref": "#p:85"
+            }
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "$id": "i:0",
+          "name": "CreditCard_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:0"
+          },
+          "properties": [
+            {
+              "$ref": "#p:0"
+            }
+          ]
+        },
+        {
+          "$id": "i:1",
+          "name": "CardTier_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:1"
+          },
+          "properties": [
+            {
+              "$ref": "#p:7"
+            }
+          ]
+        },
+        {
+          "$id": "i:2",
+          "name": "CardBIN_bin_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:2"
+          },
+          "properties": [
+            {
+              "$ref": "#p:9"
+            }
+          ]
+        },
+        {
+          "$id": "i:3",
+          "name": "RewardPlan_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:3"
+          },
+          "properties": [
+            {
+              "$ref": "#p:15"
+            }
+          ]
+        },
+        {
+          "$id": "i:4",
+          "name": "RewardRule_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:4"
+          },
+          "properties": [
+            {
+              "$ref": "#p:22"
+            }
+          ]
+        },
+        {
+          "$id": "i:5",
+          "name": "Benefit_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:5"
+          },
+          "properties": [
+            {
+              "$ref": "#p:33"
+            }
+          ]
+        },
+        {
+          "$id": "i:6",
+          "name": "BenefitTerm_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:6"
+          },
+          "properties": [
+            {
+              "$ref": "#p:40"
+            }
+          ]
+        },
+        {
+          "$id": "i:7",
+          "name": "SpendingCategory_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:7"
+          },
+          "properties": [
+            {
+              "$ref": "#p:50"
+            }
+          ]
+        },
+        {
+          "$id": "i:8",
+          "name": "Merchant_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:8"
+          },
+          "properties": [
+            {
+              "$ref": "#p:53"
+            }
+          ]
+        },
+        {
+          "$id": "i:9",
+          "name": "PaymentMethod_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:9"
+          },
+          "properties": [
+            {
+              "$ref": "#p:56"
+            }
+          ]
+        },
+        {
+          "$id": "i:10",
+          "name": "Partner_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:10"
+          },
+          "properties": [
+            {
+              "$ref": "#p:58"
+            }
+          ]
+        },
+        {
+          "$id": "i:11",
+          "name": "ServiceLocation_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:11"
+          },
+          "properties": [
+            {
+              "$ref": "#p:63"
+            }
+          ]
+        },
+        {
+          "$id": "i:12",
+          "name": "Airport_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:12"
+          },
+          "properties": [
+            {
+              "$ref": "#p:71"
+            }
+          ]
+        },
+        {
+          "$id": "i:13",
+          "name": "Region_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:13"
+          },
+          "properties": [
+            {
+              "$ref": "#p:73"
+            }
+          ]
+        },
+        {
+          "$id": "i:14",
+          "name": "Procedure_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:14"
+          },
+          "properties": [
+            {
+              "$ref": "#p:74"
+            }
+          ]
+        },
+        {
+          "$id": "i:15",
+          "name": "InternalSystem_name_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:15"
+          },
+          "properties": [
+            {
+              "$ref": "#p:82"
+            }
+          ]
+        },
+        {
+          "$id": "i:16",
+          "name": "FAQ_question_uniq",
+          "indexType": "default",
+          "entityType": "node",
+          "nodeLabel": {
+            "$ref": "#nl:16"
+          },
+          "properties": [
+            {
+              "$ref": "#p:85"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
